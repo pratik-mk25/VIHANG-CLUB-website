@@ -1,0 +1,198 @@
+/* Internships CSS - Defense Tech Dossier Aesthetic */
+.ip-hero {
+  margin-bottom: 3rem;
+}
+.ip-desc {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  line-height: 1.8;
+  max-width: 600px;
+}
+.ip-stats-container {
+  margin-bottom: 4rem;
+  border: 1px solid var(--border-light);
+  background: var(--bg2);
+}
+.ip-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-bottom: 1px solid var(--border-light);
+}
+.ip-stat-block {
+  padding: 2rem;
+  text-align: center;
+  border-right: 1px solid var(--border-light);
+  transition: background 0.3s;
+}
+.ip-stat-block:last-child {
+  border-right: none;
+}
+.ip-stat-block:hover {
+  background: rgba(255,255,255,0.02);
+}
+.ip-stat-val {
+  font-family: var(--font-mono);
+  font-size: 2.5rem;
+  color: var(--text);
+  display: block;
+  line-height: 1;
+  text-shadow: 0 0 10px rgba(255,255,255,0.2);
+}
+.ip-stat-lbl {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.2em;
+  color: var(--text-dim);
+  display: block;
+  margin-top: 0.8rem;
+}
+.ip-companies-marquee {
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  background: var(--bg3);
+}
+.ip-company-tag {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+}
+.ip-control-panel {
+  display: flex;
+  margin-bottom: 2rem;
+  border: 1px solid var(--border-light);
+  width: fit-content;
+}
+.ip-cmd-btn {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  padding: 0.8rem 1.5rem;
+  color: var(--text-dim);
+  background: transparent;
+  border: none;
+  border-right: 1px solid var(--border-light);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.ip-cmd-btn:last-child {
+  border-right: none;
+}
+.ip-cmd-btn.active {
+  color: var(--bg);
+  background: var(--text);
+}
+.ip-cmd-btn:hover:not(.active) {
+  background: rgba(255,255,255,0.05);
+  color: var(--text);
+}
+
+.ip-dossier-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.dossier-card {
+  background: var(--bg2);
+  border: 1px solid var(--border-light);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.dossier-card:hover {
+  border-color: var(--text);
+  transform: translateY(-4px);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+}
+
+.dossier-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px dashed var(--border-light);
+  padding-bottom: 0.8rem;
+}
+
+.dossier-status {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.2em;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+.dossier-status.placement {
+  border-color: #00ff66;
+  color: #00ff66;
+}
+
+.dossier-id {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--text-dim);
+}
+
+.dossier-body {
+  flex: 1;
+}
+
+.dossier-name {
+  font-family: var(--font-hud);
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  color: var(--text);
+  margin-bottom: 0.3rem;
+}
+
+.dossier-org {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.dossier-role {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.dossier-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.dossier-meta-pill {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  background: var(--bg3);
+  padding: 0.3rem 0.6rem;
+  border: 1px solid var(--border-light);
+}
+
+@media (max-width: 900px) {
+  .ip-stats-grid { grid-template-columns: 1fr 1fr; }
+  .ip-stat-block:nth-child(2) { border-right: none; }
+  .ip-stat-block:nth-child(1), .ip-stat-block:nth-child(2) { border-bottom: 1px solid var(--border-light); }
+}
+@media (max-width: 600px) {
+  .ip-stats-grid { grid-template-columns: 1fr; }
+  .ip-stat-block { border-right: none !important; border-bottom: 1px solid var(--border-light); }
+  .ip-stat-block:last-child { border-bottom: none; }
+  .ip-cmd-btn { padding: 0.8rem 1rem; font-size: 0.55rem; }
+}

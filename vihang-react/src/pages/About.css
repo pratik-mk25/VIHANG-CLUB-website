@@ -1,0 +1,313 @@
+/* ───── DOSSIER AESTHETIC ───── */
+.dossier-bg {
+  background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-top: 3rem;
+}
+
+.dossier-header {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.dossier-stamp {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  color: #ff3333;
+  border: 1px solid #ff3333;
+  padding: 0.4rem 0.8rem;
+  transform: rotate(5deg);
+  opacity: 0.7;
+}
+
+.lead {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+/* ───── STATS DECODE CARDS ───── */
+.dossier-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border-light);
+  border: 1px solid var(--border-light);
+  margin-bottom: 3rem;
+}
+
+.stat-card {
+  position: relative;
+  background: var(--bg3);
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.2s;
+  cursor: crosshair;
+  overflow: hidden;
+}
+
+.stat-card:hover {
+  background: var(--text);
+}
+
+.stat-corner {
+  position: absolute;
+  top: 0; right: 0;
+  width: 15px; height: 15px;
+  background: linear-gradient(-135deg, transparent 50%, var(--border-light) 50%);
+}
+.stat-card:hover .stat-corner {
+  background: linear-gradient(-135deg, transparent 50%, var(--bg) 50%);
+}
+
+.stat-val {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: var(--text);
+  transition: color 0.2s;
+}
+
+.stat-lbl {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.48rem;
+  letter-spacing: 0.2em;
+  color: var(--text-dim);
+  margin-top: 0.4rem;
+  transition: color 0.2s;
+}
+
+.stat-card:hover .stat-val, 
+.stat-card:hover .stat-lbl {
+  color: var(--bg);
+}
+
+/* ───── MISSION ITEMS ───── */
+.mission-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mission-item {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.2rem;
+  border: 1px solid var(--border-light);
+  background: rgba(255, 255, 255, 0.01);
+  align-items: flex-start;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.mission-item::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 2px;
+  background: var(--text-dim);
+  transition: background 0.3s;
+}
+
+.mission-item:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.mission-item:hover::before {
+  background: var(--text);
+}
+
+.mission-id {
+  font-family: var(--font-mono);
+  color: var(--text);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  margin-top: 0.2rem;
+}
+
+.mission-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mission-status {
+  font-family: var(--font-mono);
+  font-size: 0.45rem;
+  letter-spacing: 0.2em;
+  color: #00ff88;
+}
+
+.mission-item p {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ───── VISUAL ───── */
+.about-visual {
+  position: relative;
+  aspect-ratio: 4/3;
+}
+.glass-panel {
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--border-light);
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-lines {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  animation: scan 3s linear infinite;
+}
+@keyframes scan {
+  0% { top: 0; }
+  100% { top: 100%; }
+}
+
+.radar-sweep {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 200%; height: 200%;
+  background: conic-gradient(from 0deg, transparent 70%, rgba(255, 255, 255, 0.1) 100%);
+  transform-origin: center;
+  animation: sweep 4s linear infinite;
+  pointer-events: none;
+}
+@keyframes sweep {
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.hud-brackets {
+  position: absolute;
+  inset: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+.hud-brackets::before, .hud-brackets::after {
+  content: '';
+  position: absolute;
+  width: 20px; height: 20px;
+  border: 1px solid var(--text-dim);
+}
+.hud-brackets::before {
+  top: -1px; left: -1px;
+  border-right: none; border-bottom: none;
+}
+.hud-brackets::after {
+  bottom: -1px; right: -1px;
+  border-left: none; border-top: none;
+}
+
+.scan-text {
+  font-family: var(--font-mono);
+  color: var(--text-dim);
+  letter-spacing: 0.2em;
+  font-size: 0.7rem;
+  z-index: 2;
+}
+
+/* ───── GOALS ───── */
+.goals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.goal-card {
+  position: relative;
+  padding: 2.5rem 2rem;
+  border: 1px solid var(--border-light);
+  background: var(--bg3);
+  transition: all 0.3s;
+  overflow: hidden;
+}
+
+.goal-card:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-3px);
+}
+
+.goal-icon {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+.goal-icon .dot {
+  width: 6px; height: 6px;
+  background: var(--text);
+  border-radius: 50%;
+  display: block;
+}
+.goal-icon::after {
+  content: '';
+  display: block;
+  height: 1px;
+  flex-grow: 1;
+  background: var(--border-light);
+  margin-left: 1rem;
+  transition: background 0.3s;
+}
+.goal-card:hover .goal-icon::after {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.goal-title {
+  font-family: var(--font-hud);
+  font-size: 0.8rem;
+  color: var(--text);
+  letter-spacing: 0.12em;
+  margin-bottom: 0.8rem;
+}
+
+.goal-text {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+
+.goal-glow {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--text);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.goal-card:hover .goal-glow {
+  transform: scaleX(1);
+}
+
+@media (max-width: 900px) {
+  .about-grid { grid-template-columns: 1fr; }
+  .dossier-stats { grid-template-columns: 1fr; }
+}

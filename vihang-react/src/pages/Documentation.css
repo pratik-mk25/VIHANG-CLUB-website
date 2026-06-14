@@ -1,0 +1,113 @@
+.doc-ledger {
+  margin-top: 4rem;
+  border: 1px solid var(--border-light);
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 2px;
+}
+
+.doc-ledger-header {
+  display: grid;
+  grid-template-columns: 80px 150px 1fr 150px 100px;
+  gap: 1rem;
+  padding: 1.2rem 1.5rem;
+  border-bottom: 1px solid var(--border-light);
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: var(--text-dim);
+}
+
+.doc-ledger-row {
+  display: grid;
+  grid-template-columns: 80px 150px 1fr 150px 100px;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border-light);
+  align-items: center;
+  transition: all 0.3s;
+}
+
+.doc-ledger-row:last-child {
+  border-bottom: none;
+}
+
+.doc-ledger-row:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateX(5px);
+  border-left: 2px solid var(--text);
+}
+
+.doc-id {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+}
+
+.doc-class {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.doc-class::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  background: var(--primary);
+}
+
+.doc-title {
+  font-family: var(--font-hud);
+  font-size: 1.1rem;
+  color: var(--text);
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.05em;
+}
+
+.doc-desc {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 90%;
+}
+
+.doc-meta {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+}
+
+.btn-download {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  color: var(--bg);
+  background: var(--text-muted);
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  transition: all 0.2s;
+  display: inline-block;
+  text-align: center;
+}
+
+.doc-ledger-row:hover .btn-download {
+  background: var(--text);
+  box-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+@media (max-width: 1000px) {
+  .doc-ledger-header { display: none; }
+  .doc-ledger-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    align-items: start;
+  }
+}

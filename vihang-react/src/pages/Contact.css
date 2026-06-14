@@ -1,0 +1,58 @@
+/* Contact.css */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-top: 4rem;
+}
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+.contact-label {
+  font-family: var(--font-mono);
+  font-size: 0.48rem;
+  color: var(--gold);
+  margin-top: 0.1rem;
+  min-width: 2rem;
+}
+.contact-text {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  line-height: 1.5;
+}
+.contact-text a {
+  color: var(--text-dim);
+  transition: color 0.2s;
+}
+.contact-text a:hover {
+  color: var(--gold);
+}
+input, textarea {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  padding: 0.8rem 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: var(--text);
+  outline: none;
+  width: 100%;
+  text-transform: uppercase;
+  transition: border-color 0.2s;
+}
+input:focus, textarea:focus {
+  border-color: rgba(255, 176, 0, 0.4);
+}
+textarea {
+  resize: vertical;
+}
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

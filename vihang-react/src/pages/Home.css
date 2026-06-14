@@ -1,0 +1,362 @@
+/* ───── HERO SECTION ───── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+.hero-grid-bg {
+  position: absolute;
+  inset: -50px; /* Oversize for parallax */
+  background-size: 60px 60px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  mask-image: radial-gradient(circle at center, black 10%, transparent 60%);
+  -webkit-mask-image: radial-gradient(circle at center, black 10%, transparent 60%);
+  z-index: 0;
+  transition: transform 0.1s ease-out;
+}
+
+/* Crosshairs overlay */
+.hero-crosshairs {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+.crosshair-v {
+  position: absolute;
+  top: 0; bottom: 0; left: 50%;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.1), transparent);
+}
+.crosshair-h {
+  position: absolute;
+  left: 0; right: 0; top: 50%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.1), transparent);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  padding-top: 5rem;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-up {
+  opacity: 0;
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.4em;
+  color: var(--text-dim);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; box-shadow: 0 0 10px var(--text); }
+  50% { opacity: 0.4; box-shadow: none; }
+}
+.pulse-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--text);
+  border-radius: 50%;
+  animation: pulseDot 2s infinite;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 12vw, 11rem);
+  font-weight: 700;
+  line-height: 0.85;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: 2.5rem;
+}
+
+.hero-title .accent {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.7);
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+  white-space: nowrap;
+}
+
+.fade-w {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, var(--text) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.hero-desc {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: var(--text-muted);
+  max-width: 600px;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+}
+
+.hero-video-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero-video-bg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+  mix-blend-mode: luminosity;
+}
+
+.hero-video-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.8) 100%);
+  z-index: 1;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.btn-solid {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  background: var(--text);
+  color: var(--bg);
+  padding: 1rem 2rem;
+  transition: all 0.3s;
+}
+.btn-solid:hover {
+  background: var(--text-muted);
+}
+
+.btn-outline {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 1rem 2rem;
+  transition: all 0.3s;
+}
+.btn-outline:hover {
+  border-color: var(--text);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Telemetry HUD */
+.telemetry-hud {
+  display: flex;
+  gap: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-light);
+  max-width: fit-content;
+}
+.telemetry-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.tel-label {
+  font-family: var(--font-mono);
+  font-size: 0.45rem;
+  letter-spacing: 0.25em;
+  color: var(--text-dim);
+}
+.tel-value {
+  font-family: var(--font-hud);
+  font-size: 1.2rem;
+  color: var(--text);
+  letter-spacing: 0.05em;
+}
+.tel-unit {
+  font-size: 0.6rem;
+  color: var(--text-muted);
+}
+.tel-value.ok {
+  color: #00ff88;
+  text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+}
+
+/* ───── BENTO SECTION ───── */
+.bento-section {
+  padding: 5rem 0 10rem;
+  background: var(--bg);
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.bento-card {
+  position: relative;
+  background: var(--bg3);
+  border: 1px solid var(--border-light);
+  min-height: 350px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.bento-card:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Cyber Corners */
+.bento-card .corner {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-color: var(--text-muted);
+  border-style: solid;
+  border-width: 0;
+  transition: border-color 0.3s;
+  z-index: 5;
+}
+.bento-card:hover .corner {
+  border-color: var(--text);
+}
+.bento-card .corner.tl { top: 0; left: 0; border-top-width: 1px; border-left-width: 1px; }
+.bento-card .corner.tr { top: 0; right: 0; border-top-width: 1px; border-right-width: 1px; }
+.bento-card .corner.bl { bottom: 0; left: 0; border-bottom-width: 1px; border-left-width: 1px; }
+.bento-card .corner.br { bottom: 0; right: 0; border-bottom-width: 1px; border-right-width: 1px; }
+
+.bento-card.col-span-2 {
+  grid-column: span 2;
+}
+
+.bento-content {
+  position: relative;
+  z-index: 2;
+}
+
+.bento-label {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.25em;
+  color: var(--text-dim);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+.bento-label::before {
+  content: '';
+  width: 15px;
+  height: 1px;
+  background: var(--border);
+}
+
+.bento-title {
+  font-family: var(--font-hud);
+  font-size: 1.8rem;
+  letter-spacing: 0.05em;
+  color: var(--text);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.bento-desc {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 80%;
+  margin-bottom: 2.5rem;
+}
+
+.bento-link {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: var(--text);
+  transition: color 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.bento-link:hover {
+  color: var(--text-dim);
+  gap: 0.8rem;
+}
+
+.bento-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.15;
+  transition: opacity 0.5s, transform 5s linear;
+}
+
+.bento-card:hover .bento-bg {
+  opacity: 0.3;
+  transform: scale(1.05);
+}
+
+.pattern-dots {
+  background-size: 20px 20px;
+  background-image: radial-gradient(circle, var(--text) 1px, transparent 1px);
+  mask-image: linear-gradient(to right, transparent, black);
+  -webkit-mask-image: linear-gradient(to right, transparent, black);
+}
+
+.pattern-lines {
+  background: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.8) 10px, rgba(255,255,255,0.8) 11px);
+  mask-image: linear-gradient(to left, transparent, black);
+  -webkit-mask-image: linear-gradient(to left, transparent, black);
+}
+
+@media(max-width: 1024px) {
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
+  .bento-card.col-span-2 {
+    grid-column: span 1;
+  }
+  .hero-title {
+    font-size: clamp(3.5rem, 15vw, 6rem);
+  }
+}

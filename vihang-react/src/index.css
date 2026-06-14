@@ -1,0 +1,188 @@
+:root {
+  /* Defense Tech Palette - Pure Black & White */
+  --bg: #000000;
+  --bg2: #080808;
+  --bg3: #121212;
+  
+  --text: #ffffff;
+  --text-muted: #a0a0a0;
+  --text-dim: #666666;
+  
+  --border: rgba(255, 255, 255, 0.12);
+  --border-light: rgba(255, 255, 255, 0.05);
+  
+  --primary: #ffffff;
+  --primary-dim: rgba(255, 255, 255, 0.03);
+  --primary-glow: rgba(255, 255, 255, 0.1);
+
+  /* Clean, Geometric Typography */
+  --font-display: 'Teko', sans-serif;
+  --font-hud: 'Space Grotesk', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-body: 'Inter', sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: filter 0.5s;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+}
+
+/* Utilities */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+@media (max-width: 768px) {
+  .container { padding: 0 1.5rem; }
+}
+
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.56rem;
+  letter-spacing: 0.3em;
+  color: var(--primary);
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.section-label::after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 50px;
+  background: var(--primary);
+  opacity: 0.5;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 8vw, 7.5rem);
+  font-weight: 700;
+  line-height: 0.85;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+.section-title .accent {
+  color: #FFD700;
+}
+
+.btn-primary {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  color: var(--bg);
+  background: var(--primary);
+  padding: 0.8rem 2.2rem;
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+  transition: all 0.2s;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+}
+.btn-primary:hover {
+  background: var(--text);
+  box-shadow: 0 0 20px var(--primary-glow);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: var(--primary);
+  padding: 0.85rem 2rem;
+  border: 1px solid var(--border);
+  transition: all 0.2s;
+  display: inline-block;
+  cursor: pointer;
+  background: transparent;
+}
+.btn-secondary:hover {
+  background: var(--primary-dim);
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px var(--primary-glow);
+}
+
+/* Animations */
+@keyframes pulseLogo {
+  0%, 100% { opacity: 1; filter: drop-shadow(0 0 5px var(--primary)); }
+  50% { opacity: 0.6; filter: none; }
+}
+
+/* Gauntlet Styles */
+#gauntlet-switcher {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  filter: drop-shadow(0 0 10px rgba(0,0,0,0.5));
+}
+.gauntlet-svg {
+  cursor: crosshair;
+  transition: transform 0.3s;
+}
+.gauntlet-svg:hover { transform: scale(1.1); }
+.stone {
+  cursor: pointer;
+  stroke: #ffffff;
+  stroke-width: 0.5;
+  transition: all 0.3s;
+}
+.stone:hover {
+  stroke-width: 2;
+  transform: scale(1.2);
+  transform-origin: center;
+}
+.stone.space { fill: #0066ff; filter: drop-shadow(0 0 5px #00f3ff); }
+.stone.mind { fill: #ffcc00; filter: drop-shadow(0 0 5px #ffee00); }
+.stone.reality { fill: #ff003c; filter: drop-shadow(0 0 5px #ff3366); }
+.stone.power { fill: #bd00ff; filter: drop-shadow(0 0 5px #dd33ff); }
+.stone.time { fill: #00ff66; filter: drop-shadow(0 0 5px #33ff88); }
+.stone.soul { fill: #ff6600; filter: drop-shadow(0 0 5px #ff8833); }
+
+.gauntlet-tooltip {
+  font-family: var(--font-mono);
+  font-size: 0.5rem;
+  color: #daa520;
+  margin-top: 10px;
+  letter-spacing: 0.1em;
+  opacity: 0.8;
+  pointer-events: none;
+}
