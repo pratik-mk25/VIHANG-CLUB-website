@@ -30,19 +30,12 @@ const teamData = [
   { name: `Ganesh Tupkar`, role: `Member`, dept: `IT`, img: `/team img/gtupkar.jpeg`, batch: `2026` },
   { name: `Pratiksha Bawaskar`, role: `Member`, dept: `IT`, img: `/team img/pratikshab.jpeg`, batch: `2026` },
   { name: `Vedanti Damdhar`, role: `Member`, dept: `IT`, img: `/team img/vdamdhar.jpeg`, batch: `2026` },
-  { name: `VIHANG MEMBER`, role: `Member`, dept: `IT`, img: `/team img/Pvairale.jpeg`, batch: `2023` },
-  { name: `Shreya Deshmukh`, role: `Member`, dept: `IT`, img: `/team img/sd.jpeg`, batch: `2023` },
-  { name: `Bhumika Bal`, role: `Member`, dept: `IT`, img: `/team img/bbal.jpeg`, batch: `2023` },
-  { name: `Riddhi Ambere`, role: `Member`, dept: `IT`, img: ``, batch: `2023` },
-  { name: `Ishali Umale`, role: `Member`, dept: `IT`, img: `/team img/iumale.jpeg`, batch: `2023` },
-  { name: `Piyush Dawange`, role: `Member`, dept: `IT`, img: ``, batch: `2023` },
 ];
 
 const yearData = {
   '2026': { photo: 'VIHANG CLUB — BATCH 2026', caption: 'DEDICATION : THEY WERE DEDICATED' },
   '2025': { photo: 'VIHANG CLUB — BATCH 2025', caption: 'EXCELLENCE : THEY EXCELLED' },
-  '2024': { photo: 'VIHANG CLUB — BATCH 2024', caption: 'CHALLENGERS : THEY CHALLENGED' },
-  '2023': { photo: 'VIHANG CLUB — BATCH 2023 (FOUNDING)', caption: 'PIONEERS : THE FOUNDING BATCH' }
+  '2024': { photo: 'VIHANG CLUB — BATCH 2024', caption: 'CHALLENGERS : THEY CHALLENGED' }
 };
 
 export default function Team() {
@@ -72,7 +65,7 @@ export default function Team() {
 
         {/* Year Timeline Buttons */}
         <div className="team-year-timeline fade-in visible">
-          {['2026', '2025', '2024', '2023'].map(year => (
+          {['2026', '2025', '2024'].map(year => (
             <button 
               key={year} 
               className={`year-btn ${selectedYear === year ? 'active' : ''}`}
