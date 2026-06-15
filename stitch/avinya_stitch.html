@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AVINYA | DEEP-TECH RESEARCH HUB</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom scrollbar for brutalist aesthetic */
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #131313; }
+        ::-webkit-scrollbar-thumb { background: #c6c6c6; }
+        
+        .brutalist-border { border: 1px solid rgba(255, 255, 255, 0.15); }
+        .brutalist-border-heavy { border: 2px solid #c6c6c6; }
+        
+        .hud-corner {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-color: #c6c6c6;
+        }
+        
+        .scanline {
+            width: 100%;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.05);
+            position: absolute;
+            animation: scan 8s linear infinite;
+        }
+        @keyframes scan {
+            from { top: 0%; }
+            to { top: 100%; }
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-tint": "#c6c6c6",
+                      "secondary": "#c6c6c7",
+                      "on-primary-container": "#757575",
+                      "secondary-fixed-dim": "#c6c6c7",
+                      "surface-bright": "#393939",
+                      "on-tertiary-fixed": "#410000",
+                      "on-tertiary": "#690100",
+                      "primary": "#c6c6c6",
+                      "tertiary": "#ffb4a8",
+                      "on-secondary": "#2f3131",
+                      "inverse-on-surface": "#313030",
+                      "error-container": "#93000a",
+                      "surface-container-highest": "#353535",
+                      "inverse-primary": "#5e5e5e",
+                      "on-surface": "#e5e2e1",
+                      "on-tertiary-container": "#ec0000",
+                      "inverse-surface": "#e5e2e1",
+                      "tertiary-fixed": "#ffdad4",
+                      "secondary-container": "#454747",
+                      "error": "#ffb4ab",
+                      "on-error": "#690005",
+                      "surface": "#131313",
+                      "on-secondary-container": "#b4b5b5",
+                      "on-primary-fixed": "#1b1b1b",
+                      "surface-container-low": "#1c1b1b",
+                      "on-secondary-fixed-variant": "#454747",
+                      "tertiary-fixed-dim": "#ffb4a8",
+                      "on-primary": "#303030",
+                      "secondary-fixed": "#e2e2e2",
+                      "primary-container": "#000000",
+                      "surface-container-lowest": "#0e0e0e",
+                      "on-secondary-fixed": "#1a1c1c",
+                      "surface-dim": "#131313",
+                      "outline-variant": "#4c4546",
+                      "on-background": "#e5e2e1",
+                      "background": "#131313",
+                      "surface-container": "#20201f",
+                      "on-primary-fixed-variant": "#474747",
+                      "primary-fixed-dim": "#c6c6c6",
+                      "primary-fixed": "#e2e2e2",
+                      "on-surface-variant": "#cfc4c5",
+                      "on-tertiary-fixed-variant": "#930100",
+                      "outline": "#988e90",
+                      "surface-container-high": "#2a2a2a",
+                      "tertiary-container": "#000000",
+                      "on-error-container": "#ffdad6",
+                      "surface-variant": "#353535"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0px",
+                      "lg": "0px",
+                      "xl": "0px",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "unit": "8px",
+                      "col-1": "8.33%",
+                      "margin-mobile": "20px",
+                      "margin-desktop": "64px",
+                      "industrial-gap": "48px"
+              },
+              "fontFamily": {
+                      "body-md": ["JetBrains Mono"],
+                      "label-caps": ["JetBrains Mono"],
+                      "body-lg": ["JetBrains Mono"],
+                      "display-hero": ["Space Grotesk"],
+                      "headline-md": ["Space Grotesk"],
+                      "headline-lg-mobile": ["Space Grotesk"],
+                      "headline-lg": ["Space Grotesk"],
+                      "technical-data": ["JetBrains Mono"]
+              },
+              "fontSize": {
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "display-hero": ["120px", {"lineHeight": "110px", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                      "headline-md": ["32px", {"lineHeight": "38px", "fontWeight": "500"}],
+                      "headline-lg-mobile": ["40px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                      "headline-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                      "technical-data": ["14px", {"lineHeight": "20px", "fontWeight": "500"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden selection:bg-tertiary selection:text-on-tertiary">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 w-full bg-background border-b border-white/15">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:bg-on-surface/10 transition-colors p-2" data-icon="menu">menu</span>
+<h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary dark:text-primary tracking-tighter uppercase leading-none">AVINYA</h1>
+</div>
+<div class="hidden md:flex gap-gutter items-center">
+<span class="text-primary font-bold font-label-caps cursor-pointer">HOME</span>
+<span class="text-on-surface-variant hover:text-on-surface transition-colors font-label-caps cursor-pointer">NODES</span>
+<span class="text-on-surface-variant hover:text-on-surface transition-colors font-label-caps cursor-pointer">LOGS</span>
+<span class="text-on-surface-variant hover:text-on-surface transition-colors font-label-caps cursor-pointer">TERMINAL</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary active:scale-95 duration-100 cursor-pointer" data-icon="terminal">terminal</span>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-height-[795px] flex flex-col justify-center items-start px-margin-mobile md:px-margin-desktop py-industrial-gap overflow-hidden border-b border-white/15">
+<div class="scanline"></div>
+<div class="z-10 w-full">
+<div class="inline-block border border-primary px-4 py-1 mb-8">
+<p class="font-technical-data text-technical-data text-primary uppercase">[ PROTOCOL-01A // DEEP-TECH RESEARCH HUB ]</p>
+</div>
+<h1 class="font-display-hero text-[80px] md:text-display-hero leading-[0.9] md:leading-[110px] tracking-tighter uppercase mb-12">
+                    AVINYA
+                </h1>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter w-full">
+<div class="md:col-span-6 border-l border-white/30 pl-6">
+<p class="font-body-lg text-body-lg text-secondary max-w-xl">
+                            Pushing the boundaries of aerospace engineering and computational intelligence. Our nodes operate at the intersection of raw physics and neural architecture.
+                        </p>
+<div class="mt-8 flex gap-4">
+<button class="bg-transparent border-2 border-white text-on-surface font-label-caps px-8 py-4 hover:bg-on-surface hover:text-surface transition-all active:scale-95">INITIATE_SEQUENCE</button>
+<button class="bg-error border-2 border-error text-on-tertiary-fixed font-label-caps px-8 py-4 hover:bg-on-tertiary-container transition-all active:scale-95">SYSTEM_STATUS</button>
+</div>
+</div>
+<div class="hidden md:flex md:col-span-6 justify-end items-end">
+<div class="text-right font-technical-data text-on-surface-variant opacity-50">
+<p>LAT: 12.9716° N</p>
+<p>LONG: 77.5946° E</p>
+<p>STATUS: OPTIMAL</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Atmospheric Element -->
+<div class="absolute right-0 top-1/2 -translate-y-1/2 opacity-20 pointer-events-none">
+<div class="w-[500px] h-[500px] border border-white/10 rounded-full flex items-center justify-center">
+<div class="w-[300px] h-[300px] border border-white/10 rounded-full flex items-center justify-center animate-spin" style="animation-duration: 20s">
+<div class="w-1/2 h-[1px] bg-white/20"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Visionaries Section -->
+<section class="px-margin-mobile md:px-margin-desktop py-industrial-gap border-b border-white/15 bg-surface-container-lowest">
+<div class="mb-industrial-gap">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary mb-4">VISIONARIES</h2>
+<div class="w-24 h-1 bg-error"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Alan Turing -->
+<div class="group relative border border-white/15 p-gutter hover:border-white transition-colors">
+<div class="aspect-[3/4] bg-surface-container-high mb-6 overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" data-alt="A cinematic, high-contrast black and white portrait of a visionary scientist inspired by Alan Turing, set in a dark industrial lab filled with vintage computing machinery. The lighting is dramatic and moody, utilizing deep shadows and sharp highlights. The overall aesthetic is brutalist and technical, with a focus on intellectual authority and historical gravity, consistent with a monochrome deep-tech visual language." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9uJ966hd8od8v8MmA0M6OnfP5iyM2BXlRsuVsSvYZa-MBzAtfgc4cT-7BsU9uReW34OWFuwcxZFL85jAd5JiuM1F9yrtvpno4byKTFtpDct4bdZp34L0r1hkg0Q0vOC6v7ADhrtXIYcPW6hE5R08awsDq7D2zGBqVai2XSoRZfMsKW0SsyX1_RRL9WpYMrRIVetLD_ITU4vxM2wJIzlEok3CFVansIpSt534CM77ObuEFdK0QSFMy_s9sZDFxP1hQHForFLMnPXQ"/>
+<div class="absolute top-4 left-4 font-technical-data bg-surface px-2 py-1 border border-white/20">NODE_ID: AT_1912</div>
+</div>
+<h3 class="font-headline-md text-headline-md uppercase mb-4">ALAN TURING</h3>
+<p class="font-body-md text-body-md text-secondary mb-6">Pioneer of theoretical computer science and artificial intelligence. Formalized the concepts of algorithm and computation.</p>
+<div class="border-t border-white/10 pt-4 font-technical-data text-xs text-on-surface-variant">
+                        &gt;&gt; COMPUTATIONAL_LOGIC_V1.0
+                    </div>
+</div>
+<!-- APJ Abdul Kalam -->
+<div class="group relative border border-white/15 p-gutter hover:border-white transition-colors">
+<div class="aspect-[3/4] bg-surface-container-high mb-6 overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" data-alt="A powerful, dignified black and white portrait of an aerospace visionary inspired by APJ Abdul Kalam, positioned against a background of launch vehicle schematics and celestial maps. The lighting is high-contrast, emphasizing wisdom and technical prowess. The style is industrial and authoritative, with monochrome tones and sharp clarity, aligned with a futuristic research hub atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgSEDfHzkrjRzcoY9Aju3A5II6y3AmD5Pr6721Wi1VY8rHwG-VewI7lfGoHYQckwzsXhb5GHHVnWspxnvYUtyu7kPhCoeRwTUtjpkLP_pqbQrZ9iXM2DhANqtf7g5fRTQxM3Dw-flOcgUaWweLEPGfVznKgMANL8_v_eiL-zwbII2ONVR87b1KTtknnumITEPCh-FO4VenjvNSr0Zh9Tg_OHlQmXgQ4xFMEkGfXEpsC8Kz5B8X0NtJs9k1559IBW5TD3WH67psj0s"/>
+<div class="absolute top-4 left-4 font-technical-data bg-surface px-2 py-1 border border-white/20">NODE_ID: AK_1931</div>
+</div>
+<h3 class="font-headline-md text-headline-md uppercase mb-4">APJ ABDUL KALAM</h3>
+<p class="font-body-md text-body-md text-secondary mb-6">The Missile Man. Architect of India's civilian space program and military missile development efforts.</p>
+<div class="border-t border-white/10 pt-4 font-technical-data text-xs text-on-surface-variant">
+                        &gt;&gt; AEROSPACE_PROPULSION_CORE
+                    </div>
+</div>
+<!-- CV Raman -->
+<div class="group relative border border-white/15 p-gutter hover:border-white transition-colors">
+<div class="aspect-[3/4] bg-surface-container-high mb-6 overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" data-alt="A focused, high-contrast monochrome portrait of a physicist inspired by CV Raman, capturing the intensity of scientific discovery. The setting is a dark, minimalist laboratory with subtle hints of optical equipment and light refraction. The lighting is harsh yet elegant, highlighting the subject's features in a brutalist, deep-tech style that emphasizes precision and analytical depth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOmRo4zuELklqvft2AoL_mzcLEUqG9d-YDQEdF0xzO4AI7r5m4THB-aFB2pHHKxY4CI9ZVj0uhW23XcAixD_b7P64bwrYSAZBHL8Ey_SzDBcrlbhVHhFnOpITj-dtqN6P-y_6619VMo-dlN9TEMBNNVTB1DUDH1kWneoSaWB5XF_nwyvTJXKni1ev5w2451f2ccRkwdsZaiRSZuBwwlbv8WwoPUgAPm0SdXcEBw0MaHtDPU_NExy-VVg3E43FwOnlULvJtxoDISKk"/>
+<div class="absolute top-4 left-4 font-technical-data bg-surface px-2 py-1 border border-white/20">NODE_ID: CR_1888</div>
+</div>
+<h3 class="font-headline-md text-headline-md uppercase mb-4">CV RAMAN</h3>
+<p class="font-body-md text-body-md text-secondary mb-6">Nobel laureate renowned for his work on the scattering of light. Foundation for modern molecular spectroscopy.</p>
+<div class="border-t border-white/10 pt-4 font-technical-data text-xs text-on-surface-variant">
+                        &gt;&gt; QUANTUM_PHOTONICS_MODULE
+                    </div>
+</div>
+</div>
+</section>
+<!-- Timeline Section -->
+<section class="px-margin-mobile md:px-margin-desktop py-industrial-gap border-b border-white/15">
+<div class="flex flex-col md:flex-row justify-between items-start gap-gutter mb-industrial-gap">
+<div class="max-w-xl">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary leading-none mb-6">AEROSPACE_EVOLUTION</h2>
+<p class="font-body-md text-secondary uppercase">Tracing the trajectory from atmospheric flight to autonomous swarm intelligence.</p>
+</div>
+<div class="hidden md:block font-technical-data text-on-surface-variant text-right">
+                    PROTOCOL_REF: AER-TIMELINE-001<br/>
+                    SECURITY_LEVEL: ALPHA
+                </div>
+</div>
+<div class="relative pl-8 md:pl-0">
+<!-- Vertical Line -->
+<div class="absolute left-0 md:left-1/2 top-0 bottom-0 w-[1px] bg-white/20 md:-translate-x-1/2"></div>
+<div class="space-y-industrial-gap relative">
+<!-- 1903 -->
+<div class="flex flex-col md:flex-row items-start md:items-center">
+<div class="md:w-1/2 md:pr-gutter md:text-right">
+<span class="font-display-hero text-headline-md text-primary">1903</span>
+<h4 class="font-label-caps text-on-surface mt-2">FIRST_CONTROLLED_FLIGHT</h4>
+</div>
+<div class="absolute left-[-5px] md:left-1/2 md:-translate-x-1/2 w-3 h-3 bg-error z-10"></div>
+<div class="md:w-1/2 md:pl-gutter mt-4 md:mt-0">
+<p class="font-body-md text-secondary text-sm">Orville and Wilbur Wright achieve 12 seconds of powered, controlled flight in North Carolina.</p>
+</div>
+</div>
+<!-- 1961 -->
+<div class="flex flex-col md:flex-row-reverse items-start md:items-center">
+<div class="md:w-1/2 md:pl-gutter">
+<span class="font-display-hero text-headline-md text-primary">1961</span>
+<h4 class="font-label-caps text-on-surface mt-2">EXTRA_TERRESTRIAL_INSERTION</h4>
+</div>
+<div class="absolute left-[-5px] md:left-1/2 md:-translate-x-1/2 w-3 h-3 bg-primary z-10"></div>
+<div class="md:w-1/2 md:pr-gutter md:text-right mt-4 md:mt-0">
+<p class="font-body-md text-secondary text-sm">Yuri Gagarin becomes the first human to journey into outer space and orbit Earth.</p>
+</div>
+</div>
+<!-- 1981 -->
+<div class="flex flex-col md:flex-row items-start md:items-center">
+<div class="md:w-1/2 md:pr-gutter md:text-right">
+<span class="font-display-hero text-headline-md text-primary">1981</span>
+<h4 class="font-label-caps text-on-surface mt-2">REUSABLE_SYSTEM_LAUNCH</h4>
+</div>
+<div class="absolute left-[-5px] md:left-1/2 md:-translate-x-1/2 w-3 h-3 bg-primary z-10"></div>
+<div class="md:w-1/2 md:pl-gutter mt-4 md:mt-0">
+<p class="font-body-md text-secondary text-sm">The first Space Shuttle, Columbia, launches, initiating the era of reusable spacecraft.</p>
+</div>
+</div>
+<!-- 2024 -->
+<div class="flex flex-col md:flex-row-reverse items-start md:items-center">
+<div class="md:w-1/2 md:pl-gutter">
+<span class="font-display-hero text-headline-md text-error">CURRENT_ERA</span>
+<h4 class="font-label-caps text-error mt-2">SWARM_INTELLIGENCE_PROTOCOLS</h4>
+</div>
+<div class="absolute left-[-5px] md:left-1/2 md:-translate-x-1/2 w-3 h-3 bg-error z-10 animate-pulse"></div>
+<div class="md:w-1/2 md:pr-gutter md:text-right mt-4 md:mt-0">
+<p class="font-body-md text-secondary text-sm">Deployment of multi-agent autonomous drone swarms for complex reconnaissance and research.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Editorial Grid -->
+<section class="px-margin-mobile md:px-margin-desktop py-industrial-gap bg-background">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary mb-industrial-gap">SYSTEM_GALLERY</h2>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+<!-- Large Image Block -->
+<div class="md:col-span-8 border border-white/15 relative overflow-hidden group">
+<img class="w-full h-[500px] object-cover grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700" data-alt="A high-tech, futuristic aerial view of complex drone swarms moving in a coordinated grid formation over a dark, industrial landscape at night. The drones are illuminated with sharp white and red signal lights. The style is brutalist and technical, with high-contrast lighting and a focus on geometric precision. The overall mood is advanced, authoritative, and deeply technical." src="https://lh3.googleusercontent.com/aida-public/AB6AXuACBP1qdizM5fL3i7Rd5XsEoqRqvy3ol2p9RiHrdVlxRsWJTcz6XefqoM-_TsYgLwDA_oNWXFsC_qTBTyBFeCzB-PP6dGLCA5PQ3aLCi-wAFdwqOOV1voiOKMdLgvvTBMP7ffyXtkMrJL7t2DbsAZxoMLdXD5QqGGjZt2eEyLZ4zHxoWKNvPmQ2XOFxMM5nDkPSRrjaiAd9xeYRannROPKZyp2FP3L93-CDK9cqD3gP28yXmL1unsC2hVzxrtu_n2lztVPq4XXp2K8"/>
+<div class="absolute bottom-0 left-0 p-gutter bg-background/80 backdrop-blur-sm border-t border-r border-white/15">
+<span class="font-label-caps text-primary">COMPLEX_DRONE_SYSTEMS // V4.2</span>
+</div>
+</div>
+<!-- Vertical Text Block -->
+<div class="md:col-span-4 border border-white/15 p-gutter flex flex-col justify-between bg-surface-container">
+<div>
+<span class="material-symbols-outlined text-error mb-4" data-icon="grid_view">grid_view</span>
+<h3 class="font-headline-md text-headline-md uppercase mb-4 leading-tight">NEURAL_NETWORK_AI</h3>
+<p class="font-body-md text-on-surface-variant">Our deep-tech hub implements edge-computing AI protocols directly into aerospace hardware, enabling real-time decision-making in volatile environments.</p>
+</div>
+<div class="font-technical-data text-xs pt-8 border-t border-white/10 mt-auto">
+                        REF: NX-AI-CORE-001<br/>
+                        LOAD: STABLE
+                    </div>
+</div>
+<!-- Asymmetric Secondary Block -->
+<div class="md:col-span-4 border border-white/15 h-[400px] overflow-hidden group relative">
+<img class="w-full h-full object-cover grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700" data-alt="An extreme close-up of high-performance semiconductor architecture and micro-circuitry, shot in high-contrast monochrome with sharp red lighting accents. The style is starkly technical and brutalist, emphasizing the intricate complexity of deep-tech engineering. The lighting creates dramatic shadows, and the overall aesthetic is cold, precise, and advanced." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAj2eykzmCpEaM5vFry4zCYq3dMIGojfp06b1lBavDSxOqa-KD6hRl-36qK22jhtB65zl1vEQjaHmVHI5Xb9Bb6uhnRLfZ5FYGoVfdj8RDcnIxWeAG-twZhLCIGRW8eTm032yJxrMNu7h3DtYC5Aa1MS3bOT7xt3cc1zzweyAJB0uqLIM5R_g-ma8nURx8VO2cxFXdzn1D_xYbf2Gl-m3VTGD1iDd7JuA4jJ3Pv0QXcuUF12vKCkiIKSg2bxJQpwTZ8S0NbmWR0P0U"/>
+<div class="absolute top-4 right-4 font-technical-data bg-error text-on-tertiary-fixed px-2">LIVE</div>
+</div>
+<div class="md:col-span-8 border border-white/15 p-gutter grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+<div>
+<h4 class="font-label-caps text-primary mb-2">AUTONOMOUS_RESEARCH</h4>
+<p class="font-body-md text-secondary">Decentralized nodes collecting data across 14 global stations in synchronous time-frames.</p>
+</div>
+<div class="border-l border-white/15 pl-gutter">
+<div class="space-y-2">
+<div class="flex justify-between font-technical-data text-xs">
+<span>SIGNAL_STRENGTH</span>
+<span>98%</span>
+</div>
+<div class="w-full bg-white/10 h-1">
+<div class="bg-primary h-full w-[98%]"></div>
+</div>
+<div class="flex justify-between font-technical-data text-xs">
+<span>NODE_UPTIME</span>
+<span>99.9%</span>
+</div>
+<div class="w-full bg-white/10 h-1">
+<div class="bg-error h-full w-[99%]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t-2 border-white/10 w-full flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop py-industrial-gap">
+<div class="mb-8 md:mb-0">
+<h5 class="font-label-caps text-label-caps text-on-surface mb-2">AVINYA DEEP-TECH</h5>
+<p class="font-technical-data text-technical-data uppercase text-secondary">©2024 AVINYA DEEP-TECH HUB | PROTOCOL-01A</p>
+</div>
+<div class="flex flex-wrap justify-center gap-industrial-gap">
+<a class="font-technical-data text-technical-data uppercase text-secondary hover:text-on-surface transition-colors" href="#">WHITEPAPERS</a>
+<a class="font-technical-data text-technical-data uppercase text-secondary hover:text-on-surface transition-colors" href="#">CORE_METRICS</a>
+<a class="font-technical-data text-technical-data uppercase text-secondary hover:text-on-surface transition-colors" href="#">LEGAL_SCHEMATIC</a>
+</div>
+<div class="mt-8 md:mt-0 flex gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer" data-icon="science">science</span>
+<span class="material-symbols-outlined text-primary cursor-pointer" data-icon="rocket_launch">rocket_launch</span>
+</div>
+</footer>
+<script>
+        // Micro-interactions and HUD effects
+        document.addEventListener('mousemove', (e) => {
+            const scanline = document.querySelector('.scanline');
+            if (scanline) {
+                const opacity = 0.05 + (Math.random() * 0.02);
+                scanline.style.opacity = opacity;
+            }
+        });
+
+        // Simple Parallax for hero
+        window.addEventListener('scroll', () => {
+            const scroll = window.pageYOffset;
+            const heroText = document.querySelector('h1');
+            if (heroText) {
+                heroText.style.transform = `translateY(${scroll * 0.1}px)`;
+            }
+        });
+    </script>
+</body></html>
