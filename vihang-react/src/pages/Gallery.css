@@ -17,40 +17,19 @@
 .gallery-item.masonry-item {
   position: relative;
   background: var(--bg2);
-  border: 1px solid var(--border-light);
-  border-radius: 2px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
   cursor: pointer;
   break-inside: avoid;
-  margin-bottom: 2rem;
-  transition: transform 0.4s ease, border-color 0.4s ease;
-  padding: 0.5rem;
-  padding-bottom: 3.5rem; /* Space for polaroid-like text or just to make it look like a physical photo */
-  background: #fff; /* Polaroid white background */
-}
-
-/* Masking Tape Effect */
-.gallery-item.masonry-item::before {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  width: 100px;
-  height: 30px;
-  background-color: rgba(240, 240, 240, 0.7);
-  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-  transform: translateX(-50%) rotate(-3deg);
-  z-index: 10;
-  backdrop-filter: blur(2px);
-  pointer-events: none;
-}
-
-.gallery-item.masonry-item:nth-child(even)::before {
-  transform: translateX(-50%) rotate(4deg);
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
 .gallery-item.masonry-item:hover {
-  border-color: rgba(255, 255, 255, 0.3);
+  border-color: var(--primary);
   transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
 .gallery-thumb {
@@ -66,7 +45,7 @@
 }
 
 .gallery-item:hover .gallery-thumb img {
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 
 .gallery-overlay.masonry-overlay {
@@ -74,20 +53,33 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 0.5rem 1rem;
+  padding: 2rem 1.5rem 1.5rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-.gallery-cat { font-family: var(--font-mono); font-size: 0.55rem; letter-spacing: 0.15em; color: var(--accent-orange); margin-bottom: 0.2rem; }
+.gallery-item:hover .gallery-overlay.masonry-overlay {
+  opacity: 1;
+}
+
+.gallery-cat {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  color: var(--primary);
+  margin-bottom: 0.2rem;
+}
+
 .gallery-title {
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 600;
   letter-spacing: 0.05em;
-  color: #111;
+  color: #fff;
   line-height: 1.2;
 }
 
