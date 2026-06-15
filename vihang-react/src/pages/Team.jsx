@@ -39,10 +39,10 @@ const teamData = [
 ];
 
 const yearData = {
-  '2026': { photo: 'VIHANG CLUB — BATCH 2026', caption: 'FULL TEAM PHOTO · 2026 BATCH · SSGMCE SHEGAON' },
-  '2025': { photo: 'VIHANG CLUB — BATCH 2025', caption: 'FULL TEAM PHOTO · 2025 BATCH · SSGMCE SHEGAON' },
-  '2024': { photo: 'VIHANG CLUB — BATCH 2024', caption: 'FULL TEAM PHOTO · 2024 BATCH · SSGMCE SHEGAON' },
-  '2023': { photo: 'VIHANG CLUB — BATCH 2023 (FOUNDING)', caption: 'FOUNDING BATCH PHOTO · 2023 · SSGMCE SHEGAON' }
+  '2026': { photo: 'VIHANG CLUB — BATCH 2026', caption: 'DEDICATION : THEY WERE DEDICATED' },
+  '2025': { photo: 'VIHANG CLUB — BATCH 2025', caption: 'EXCELLENCE : THEY EXCELLED' },
+  '2024': { photo: 'VIHANG CLUB — BATCH 2024', caption: 'CHALLENGERS : THEY CHALLENGED' },
+  '2023': { photo: 'VIHANG CLUB — BATCH 2023 (FOUNDING)', caption: 'PIONEERS : THE FOUNDING BATCH' }
 };
 
 export default function Team() {
