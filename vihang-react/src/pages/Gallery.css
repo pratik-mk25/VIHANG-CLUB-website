@@ -24,7 +24,6 @@
   margin-bottom: 2rem;
   transition: transform 0.4s ease, border-color 0.4s ease;
   padding: 0.5rem;
-  padding-bottom: 3.5rem;
   background: #fff;
 }
 
@@ -74,18 +73,22 @@
 }
 
 .gallery-overlay.masonry-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
   width: 100%;
-  padding: 0.5rem 1rem;
+  padding: 1rem 0.5rem 0.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
   pointer-events: none;
 }
 
-.gallery-cat { font-family: var(--font-mono); font-size: 0.55rem; letter-spacing: 0.15em; color: var(--accent-orange); margin-bottom: 0.2rem; }
+.gallery-cat { 
+  font-family: var(--font-mono); 
+  font-size: 0.65rem; 
+  letter-spacing: 0.15em; 
+  color: #ff5722; /* High contrast orange */
+  margin-bottom: 0.4rem; 
+  font-weight: 600;
+}
 .gallery-title {
   font-family: var(--font-body);
   font-size: 1rem;
