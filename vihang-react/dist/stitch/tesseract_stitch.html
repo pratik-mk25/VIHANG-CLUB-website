@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TESSERACT_DASHBOARD_v4.0</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#131313",
+                        "on-error": "#690005",
+                        "on-background": "#e5e2e1",
+                        "on-error-container": "#ffdad6",
+                        "on-primary": "#003907",
+                        "on-primary-fixed-variant": "#00530e",
+                        "secondary": "#c6c6c7",
+                        "on-secondary": "#2f3131",
+                        "primary-container": "#00ff41",
+                        "primary": "#ebffe2",
+                        "on-secondary-fixed-variant": "#454747",
+                        "on-tertiary-fixed": "#410001",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "surface-container-highest": "#353534",
+                        "on-tertiary-container": "#c4010b",
+                        "surface-container": "#201f1f",
+                        "inverse-surface": "#e5e2e1",
+                        "primary-fixed": "#72ff70",
+                        "primary-fixed-dim": "#00e639",
+                        "tertiary-container": "#ffd2cc",
+                        "on-tertiary-fixed-variant": "#930005",
+                        "surface-container-low": "#1c1b1b",
+                        "on-surface-variant": "#b9ccb2",
+                        "tertiary-fixed": "#ffdad5",
+                        "outline-variant": "#3b4b37",
+                        "on-primary-container": "#007117",
+                        "surface": "#131313",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "error": "#ffb4ab",
+                        "tertiary-fixed-dim": "#ffb4aa",
+                        "inverse-primary": "#006e16",
+                        "outline": "#84967e",
+                        "surface-variant": "#353534",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-primary-fixed": "#002203",
+                        "on-surface": "#e5e2e1",
+                        "on-tertiary": "#690003",
+                        "surface-tint": "#00e639",
+                        "inverse-on-surface": "#313030",
+                        "secondary-fixed": "#e2e2e2",
+                        "on-secondary-container": "#b4b5b5",
+                        "error-container": "#93000a",
+                        "tertiary": "#fff7f6",
+                        "surface-bright": "#3a3939",
+                        "background": "#131313",
+                        "secondary-container": "#454747",
+                        "surface-container-high": "#2a2a2a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0rem",
+                        "lg": "0rem",
+                        "xl": "0rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "4px",
+                        "unit": "8px",
+                        "margin": "24px",
+                        "col-width": "80px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-sm": ["Space Grotesk"],
+                        "code-sm": ["JetBrains Mono"],
+                        "label-caps": ["JetBrains Mono"],
+                        "headline-lg": ["Space Grotesk"],
+                        "headline-md": ["Space Grotesk"],
+                        "data-md": ["JetBrains Mono"],
+                        "data-lg": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "headline-sm": ["18px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "code-sm": ["12px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-caps": ["11px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.1", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                        "data-md": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "data-lg": ["20px", {"lineHeight": "1.4", "letterSpacing": "-0.02em", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #000000;
+            color: #e5e2e1;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .hud-border {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .hud-border-primary {
+            border: 1px solid #00FF41;
+        }
+        .scanline {
+            width: 100%;
+            height: 2px;
+            background: rgba(0, 255, 65, 0.1);
+            position: absolute;
+            animation: scan 4s linear infinite;
+            z-index: 50;
+            pointer-events: none;
+        }
+        @keyframes scan {
+            0% { top: 0; }
+            100% { top: 100%; }
+        }
+        .crosshair-corner {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-color: #00FF41;
+        }
+        .ch-tl { top: -1px; left: -1px; border-top: 2px solid; border-left: 2px solid; }
+        .ch-tr { top: -1px; right: -1px; border-top: 2px solid; border-right: 2px solid; }
+        .ch-bl { bottom: -1px; left: -1px; border-bottom: 2px solid; border-left: 2px solid; }
+        .ch-br { bottom: -1px; right: -1px; border-bottom: 2px solid; border-right: 2px solid; }
+
+        /* Custom scrollbar for tactical look */
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #000; }
+        ::-webkit-scrollbar-thumb { background: #00FF41; }
+    </style>
+</head>
+<body class="bg-black">
+<div class="scanline"></div>
+<!-- Top Navigation Bar (Shared Component Strategy) -->
+<header class="bg-surface text-primary fixed top-0 w-full z-50 border-b border-outline-variant h-12 flex justify-between items-center px-margin">
+<div class="flex items-center gap-base">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">terminal</span>
+<h1 class="font-headline-sm text-headline-sm uppercase tracking-widest font-code-sm text-code-sm">TESSERACT_SYS_v4.0</h1>
+</div>
+<div class="flex items-center gap-gutter">
+<div class="hidden md:flex gap-margin">
+<span class="text-primary border-b-2 border-primary font-code-sm text-code-sm cursor-pointer">[ DASHBOARD ]</span>
+<span class="text-on-surface-variant font-code-sm text-code-sm hover:bg-primary hover:text-surface-dim transition-colors duration-150 cursor-pointer p-1">[ OPERATIONS ]</span>
+</div>
+<span class="material-symbols-outlined cursor-pointer active:opacity-80">sensors</span>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-12 pb-16 min-h-screen">
+<!-- Section 1: Hero Header -->
+<section class="p-margin border-b border-outline-variant relative overflow-hidden">
+<div class="absolute top-0 right-0 p-base opacity-20 font-code-sm text-[80px] leading-none pointer-events-none select-none">
+                04
+            </div>
+<div class="relative z-10 space-y-unit">
+<div class="flex items-center gap-base">
+<div class="w-2 h-2 bg-primary-container animate-pulse"></div>
+<span class="font-label-caps text-label-caps text-primary-container">SYSTEM_STATUS: OPERATIONAL</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tighter">TESSERACT_SYS</h2>
+<p class="font-code-sm text-code-sm text-on-surface-variant max-w-md">
+                    [ PROTOCOL_04 // DEEP-TECH_ROBOTICS_LAB ]
+                </p>
+<div class="pt-margin flex gap-gutter">
+<button class="px-margin py-base border border-primary-container text-primary-container font-code-sm uppercase hover:bg-primary-container hover:text-black transition-all">
+                        INITIALIZE_CORE
+                    </button>
+<button class="px-margin py-base border border-on-surface-variant/20 text-on-surface-variant font-code-sm uppercase hover:bg-on-surface-variant/10 transition-all">
+                        VIEW_LOGS
+                    </button>
+</div>
+</div>
+</section>
+<!-- Section 2: Technical Timeline 'PIONEER_CHRONICLES' -->
+<section class="p-margin border-b border-outline-variant bg-surface-container-lowest">
+<div class="flex justify-between items-end mb-margin">
+<h3 class="font-headline-sm text-headline-sm text-primary uppercase tracking-widest">PIONEER_CHRONICLES</h3>
+<span class="font-code-sm text-code-sm text-on-surface-variant">ARCHIVE_INDEX: 001-002</span>
+</div>
+<div class="space-y-margin">
+<!-- Card 1: Ada Lovelace -->
+<article class="relative bg-surface-container border border-outline-variant p-unit group hover:border-primary-container transition-colors">
+<!-- HUD Brackets -->
+<div class="crosshair-corner ch-tl"></div>
+<div class="crosshair-corner ch-tr"></div>
+<div class="crosshair-corner ch-bl"></div>
+<div class="crosshair-corner ch-br"></div>
+<div class="flex flex-col md:flex-row gap-margin">
+<div class="w-full md:w-48 aspect-square relative overflow-hidden border border-outline-variant">
+<img alt="Ada Lovelace" class="w-full h-full object-cover grayscale contrast-125 brightness-75 group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCynJKciqQZc1VQW24RUfLnoFnc7MWbaQ7oEGjeRQvdfBHcoh14x9CC_2PI12Qyy3L9e8fs5xvmz40hKshThCrC3BxJ9PsmfRiykuONpXH7qH4_ecSb8jhDQuYNP0tCTrhnTnYBF3aGokMHiJY9z4w09Nc-gbv3NxjDCInZP2qq-RMydRjcmF_0q-KT4EoPXi3fyE_XJzxQrncMv2yOwgXbmNPOkbPvFpcZagqColH9FPM_kMeeBw_H7DVeRioSlod54-afJ93Ta-g"/>
+<div class="absolute top-2 left-2 bg-black/80 px-1 border border-primary-container/40">
+<span class="font-code-sm text-[10px] text-primary-container">[SUBJECT: LOVELACE]</span>
+</div>
+</div>
+<div class="flex-1 flex flex-col justify-between py-base">
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-base">ADA LOVELACE</h4>
+<p class="font-code-sm text-code-sm text-primary-container uppercase tracking-tighter mb-unit">THE ANALYTICAL ENGINE</p>
+<p class="font-data-md text-data-md text-on-surface-variant/80">
+                                    Integrated algorithmic structure for the Babbage engine. First logic sequence implementation. 
+                                </p>
+</div>
+<div class="flex gap-base mt-margin">
+<span class="px-1 border border-outline-variant font-code-sm text-[10px]">[ CLASS: ORIGIN ]</span>
+<span class="px-1 border border-outline-variant font-code-sm text-[10px]">[ PRIORITY: ALPHA ]</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 2: Dennis Ritchie -->
+<article class="relative bg-surface-container border border-outline-variant p-unit group hover:border-primary-container transition-colors">
+<div class="crosshair-corner ch-tl"></div>
+<div class="crosshair-corner ch-tr"></div>
+<div class="crosshair-corner ch-bl"></div>
+<div class="crosshair-corner ch-br"></div>
+<div class="flex flex-col md:flex-row gap-margin">
+<div class="w-full md:w-48 aspect-square relative overflow-hidden border border-outline-variant">
+<img alt="Dennis Ritchie" class="w-full h-full object-cover grayscale contrast-125 brightness-75 group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACXo1visXJUT3KnyJaOM91_6wieHpOQAimHbVDrsv8rCjCkK0AFCNHSC67ORonvLF-luyPUG51LAcmZGGv5hmxOqw9cqeAg7QiAmrakZOyG7cs56NLdShPTNFXRaDJR2A1reuJJmmpOz5nk7TFbEs8sQ94pyPzOwmT-aDYwYmCNMbtcklFree_uYD7dyB-FGjXtLX7xZMeeeqHMh3nNX2ej-ks0SS798Z4305Lox5IKHxv5FY6t92rkiMYbKutZ9AjOd1O-ZBqy6w"/>
+<div class="absolute top-2 left-2 bg-black/80 px-1 border border-primary-container/40">
+<span class="font-code-sm text-[10px] text-primary-container">[SUBJECT: RITCHIE]</span>
+</div>
+</div>
+<div class="flex-1 flex flex-col justify-between py-base">
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-base">DENNIS RITCHIE</h4>
+<p class="font-code-sm text-code-sm text-primary-container uppercase tracking-tighter mb-unit">SYSTEMS_ARCHITECTURE</p>
+<p class="font-data-md text-data-md text-on-surface-variant/80">
+                                    C language development and Unix implementation. Core foundational protocol for all subsequent TESSERACT kernels.
+                                </p>
+</div>
+<div class="flex gap-base mt-margin">
+<span class="px-1 border border-outline-variant font-code-sm text-[10px]">[ CLASS: SYSTEM ]</span>
+<span class="px-1 border border-outline-variant font-code-sm text-[10px]">[ PRIORITY: OMEGA ]</span>
+</div>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- Section 3: Data Grid -->
+<section class="p-margin">
+<div class="flex items-center gap-unit mb-margin">
+<div class="w-12 h-[1px] bg-primary-container"></div>
+<h3 class="font-label-caps text-label-caps text-primary-container uppercase">REAL_TIME_TELEMETRY</h3>
+</div>
+<div class="grid grid-cols-2 gap-unit">
+<!-- Telemetry Boxes -->
+<div class="border border-outline-variant p-unit bg-surface-container-low hover:border-primary-container transition-colors cursor-crosshair">
+<span class="block font-code-sm text-[10px] text-on-surface-variant mb-base">SENS_01</span>
+<div class="font-data-lg text-data-lg text-primary tracking-tighter">TEMP_CONTROL: 22C</div>
+</div>
+<div class="border border-outline-variant p-unit bg-surface-container-low hover:border-primary-container transition-colors cursor-crosshair">
+<span class="block font-code-sm text-[10px] text-on-surface-variant mb-base">SYNC_04</span>
+<div class="font-data-lg text-data-lg text-primary tracking-tighter">ROBOTIC_ARM_SYNC: 98%</div>
+</div>
+<div class="border border-outline-variant p-unit bg-surface-container-low hover:border-primary-container transition-colors cursor-crosshair">
+<span class="block font-code-sm text-[10px] text-on-surface-variant mb-base">COMMS_09</span>
+<div class="font-data-lg text-data-lg text-primary tracking-tighter">UPLINK_STATUS: ACTIVE</div>
+</div>
+<div class="border border-outline-variant p-unit bg-surface-container-low hover:border-primary-container transition-colors cursor-crosshair">
+<span class="block font-code-sm text-[10px] text-on-surface-variant mb-base">PWR_02</span>
+<div class="font-data-lg text-data-lg text-primary tracking-tighter">VOLTAGE: 400V</div>
+</div>
+<div class="border border-outline-variant p-unit bg-surface-container-low hover:border-primary-container transition-colors cursor-crosshair">
+<span class="block font-code-sm text-[10px] text-on-surface-variant mb-base">LAT_05</span>
+<div class="font-data-lg text-data-lg text-primary tracking-tighter">LATENCY: 4.2ms</div>
+</div>
+<div class="border border-outline-variant p-unit bg-surface-container-low hover:border-primary-container transition-colors cursor-crosshair">
+<span class="block font-code-sm text-[10px] text-on-surface-variant mb-base">PROC_07</span>
+<div class="font-data-lg text-data-lg text-primary tracking-tighter">LOAD: 14%</div>
+</div>
+</div>
+<!-- Decorative HUD Elements -->
+<div class="mt-margin grid grid-cols-4 h-1 gap-base">
+<div class="bg-primary-container"></div>
+<div class="bg-primary-container opacity-50"></div>
+<div class="bg-primary-container opacity-20"></div>
+<div class="border border-primary-container/20"></div>
+</div>
+</section>
+</main>
+<!-- Navigation Drawer (Side - Strategy for desktop/wide mobile) -->
+<nav class="hidden lg:flex flex-col gap-gutter p-margin h-full w-[240px] fixed left-0 top-0 bg-surface-container-low border-r border-outline-variant z-40 mt-12">
+<div class="mb-margin">
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-base">SYSTEM_INDEX</p>
+<div class="h-[1px] w-full bg-outline-variant"></div>
+</div>
+<div class="space-y-base">
+<a class="flex items-center gap-unit p-unit bg-primary-container text-on-primary-container border border-primary font-label-caps text-label-caps uppercase active:scale-95 transition-all" href="#">
+<span class="material-symbols-outlined">grid_view</span>
+                [ CORE_OPERATIONS ]
+            </a>
+<a class="flex items-center gap-unit p-unit text-on-surface border border-transparent hover:border-primary hover:text-primary font-label-caps text-label-caps uppercase transition-all" href="#">
+<span class="material-symbols-outlined">biotech</span>
+                [ BIO_LAB_SECTOR ]
+            </a>
+<a class="flex items-center gap-unit p-unit text-on-surface border border-transparent hover:border-primary hover:text-primary font-label-caps text-label-caps uppercase transition-all" href="#">
+<span class="material-symbols-outlined">hub</span>
+                [ QUANTUM_ARRAY ]
+            </a>
+<a class="flex items-center gap-unit p-unit text-on-surface border border-transparent hover:border-primary hover:text-primary font-label-caps text-label-caps uppercase transition-all" href="#">
+<span class="material-symbols-outlined">security</span>
+                [ ENCRYPTION_HUB ]
+            </a>
+</div>
+<div class="mt-auto pt-margin border-t border-outline-variant">
+<div class="flex items-center justify-between font-code-sm text-[10px] text-on-surface-variant">
+<span>AUTH_LEVEL:</span>
+<span class="text-primary-container">LEVEL_4</span>
+</div>
+<div class="mt-base bg-outline-variant/20 h-1 w-full overflow-hidden">
+<div class="bg-primary-container h-full w-2/3"></div>
+</div>
+</div>
+</nav>
+<!-- Footer -->
+<footer class="fixed bottom-0 w-full bg-surface-container-lowest border-t border-outline-variant flex justify-between items-center px-margin py-base z-40">
+<div class="flex items-center gap-margin">
+<p class="font-code-sm text-code-sm text-on-surface-variant uppercase">SEC_PROTOCOL: AES-256_ACTIVE</p>
+</div>
+<div class="flex gap-margin">
+<span class="font-code-sm text-code-sm uppercase text-on-surface-variant hover:text-primary transition-opacity cursor-default">SESSION_ID: 8829-X</span>
+<span class="hidden md:inline font-code-sm text-code-sm uppercase text-on-surface-variant hover:text-primary transition-opacity cursor-default">UPLINK: STABLE</span>
+<span class="font-code-sm text-code-sm uppercase text-primary transition-opacity cursor-default">SYNC_LATENCY: 12ms</span>
+</div>
+</footer>
+<!-- Interactive Layer -->
+<script>
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX;
+            const y = e.clientY;
+            // Technical hud effect could go here if needed
+        });
+
+        // Simple button click micro-interaction
+        document.querySelectorAll('button, a').forEach(el => {
+            el.addEventListener('click', () => {
+                const clickSound = new Audio(); // Placeholder for actual logic
+                console.log('EVENT_TRIGGERED: NAV_OR_ACTION');
+            });
+        });
+    </script>
+</body></html>

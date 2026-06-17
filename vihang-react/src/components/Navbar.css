@@ -186,3 +186,21 @@ nav.scrolled {
   .nav-links { display: none; }
   .hamburger { display: flex; z-index: 901; }
 }
+
+/* Light Theme Overrides (Avinya/Tesseract pages) */
+nav.nav-light:not(.scrolled) .nav-logo-text {
+  color: #1a1a1a;
+}
+nav.nav-light:not(.scrolled) .nav-logo-subtext {
+  color: #b87300;
+}
+nav.nav-light:not(.scrolled) .nav-links a {
+  color: #1a1a1a;
+}
+nav.nav-light:not(.scrolled) .nav-links a:hover,
+nav.nav-light:not(.scrolled) .nav-links a.active {
+  color: #b87300;
+}
+nav.nav-light:not(.scrolled) .hamburger span {
+  background: #1a1a1a;
+}

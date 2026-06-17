@@ -21,6 +21,30 @@ footer {
   max-width: 300px;
 }
 
+.social-links {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.social-icon {
+  color: var(--text-dim);
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icon:hover {
+  color: var(--text);
+  transform: translateY(-2px);
+}
+
+.social-icon.placeholder {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .footer-heading {
   font-family: var(--font-display);
   font-size: 0.7rem;

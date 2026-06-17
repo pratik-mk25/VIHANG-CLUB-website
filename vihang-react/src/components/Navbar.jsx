@@ -30,9 +30,11 @@ export default function Navbar() {
     { path: '/contact', label: 'CONTACT' },
   ];
 
+  const isLightRoute = location.pathname === '/avinya' || location.pathname === '/tesseract';
+
   return (
     <>
-      <nav id="navbar" className={scrolled ? 'scrolled' : ''}>
+      <nav id="navbar" className={`${scrolled ? 'scrolled' : ''} ${isLightRoute ? 'nav-light' : ''}`.trim()}>
         <Link to="/" className="nav-logo" onClick={closeMobile}>
           <div className="nav-logo-icon">
             <div className="logo-flip-container">

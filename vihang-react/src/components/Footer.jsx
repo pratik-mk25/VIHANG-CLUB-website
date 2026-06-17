@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Instagram, Linkedin, Youtube, Twitter } from 'lucide-react';
 import './Footer.css';
 
 export default function Footer({ onEasterEggTrigger }) {
@@ -27,15 +28,24 @@ export default function Footer({ onEasterEggTrigger }) {
           <div className="footer-brand">
             <Link to="/" className="nav-logo">
               <div className="nav-logo-icon">
-                <img src={`${import.meta.env.BASE_URL}vihang-logo-transparent.png`} alt="Vihang Logo" style={{ height: '172px', objectFit: 'contain' }} />
+                <img src={`${import.meta.env.BASE_URL}vihang-logo-transparent.png`} alt="Vihang Logo" style={{ height: '64px', objectFit: 'contain' }} />
               </div>
               <span className="nav-logo-text">VIH<span className="accent">A</span>NG CLUB</span>
             </Link>
             <p className="footer-desc">PIONEERING HUB FOR DRONE RESEARCH AND DEVELOPMENT AT SSGMCE, SHEGAON.</p>
             <div className="social-links">
-              <a href="https://instagram.com/vihang_ssgmce" target="_blank" rel="noreferrer" className="social-link">IG</a>
-              <a href="https://linkedin.com/company/vihang-club" target="_blank" rel="noreferrer" className="social-link">LI</a>
-              <a href="https://youtube.com/@vihangclub" target="_blank" rel="noreferrer" className="social-link">YT</a>
+              <a href="https://www.instagram.com/vihangdroneclub_ssgmce?igsh=MTBpNmVoYWRzY2pvaQ==" target="_blank" rel="noreferrer" className="social-icon">
+                <Instagram size={20} strokeWidth={1.5} />
+              </a>
+              <a href="https://www.linkedin.com/company/vihang-drone-club/" target="_blank" rel="noreferrer" className="social-icon">
+                <Linkedin size={20} strokeWidth={1.5} />
+              </a>
+              <a href="https://youtube.com/@vihangdroneclubssgmce?si=qsOPABQH5tYZ2WVe" target="_blank" rel="noreferrer" className="social-icon">
+                <Youtube size={20} strokeWidth={1.5} />
+              </a>
+              <a href="#" target="_blank" rel="noreferrer" className="social-icon placeholder" title="X (Twitter) - Coming Soon">
+                <Twitter size={20} strokeWidth={1.5} />
+              </a>
             </div>
           </div>
           <div>
@@ -64,7 +74,7 @@ export default function Footer({ onEasterEggTrigger }) {
             </div>
             <div className="contact-item">
               <span className="contact-label">EML</span>
-              <span className="contact-text"><a href="mailto:vihang@ssgmce.ac.in">VIHANG@SSGMCE.AC.IN</a></span>
+              <span className="contact-text"><a href="mailto:vihangdroneclub@gmail.com">VIHANGDRONECLUB@GMAIL.COM</a></span>
             </div>
           </div>
         </div>
@@ -76,7 +86,7 @@ export default function Footer({ onEasterEggTrigger }) {
           >
             © {new Date().getFullYear()} VIHANG CLUB. ALL RIGHTS RESERVED.
           </p>
-          <span className="footer-tagline">INNOVATE · NAVIGATE · ELEVATE</span>
+          <span className="footer-tagline">DEDICATED TO THE LOTUS FEET OF SHRI SANT GAJANAN MAHARAJ AND VITHU MAULI</span>
         </div>
       </div>
     </footer>

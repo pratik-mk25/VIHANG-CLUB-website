@@ -1,0 +1,53 @@
+.ribbon-decorations-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 0; /* Sit behind the main content container */
+  overflow: hidden;
+}
+
+.ribbon-image {
+  position: absolute;
+  top: 10%; /* Start slightly down the page */
+  width: 400px;
+  height: auto;
+  opacity: 0.6; /* Slight fade so they don't overpower the page */
+  mix-blend-mode: darken; /* Ensures the backgrounds blend perfectly */
+  transition: transform 0.1s linear;
+}
+
+.ribbon-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  /* Add a soft gradient mask to fade out the top and bottom edges smoothly */
+  mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.ribbon-image.left {
+  left: -50px;
+}
+
+.ribbon-image.right {
+  right: -50px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1400px) {
+  .ribbon-image {
+    width: 300px;
+    opacity: 0.4;
+  }
+  .ribbon-image.left { left: -80px; }
+  .ribbon-image.right { right: -80px; }
+}
+
+@media (max-width: 1024px) {
+  .ribbon-decorations-container {
+    display: none;
+  }
+}

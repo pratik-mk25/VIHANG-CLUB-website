@@ -16,6 +16,8 @@ import Internships from './pages/Internships';
 import Contact from './pages/Contact';
 import Avinya from './pages/Avinya';
 import Tesseract from './pages/Tesseract';
+import AvinyaStitch from './pages/AvinyaStitch';
+import TesseractStitch from './pages/TesseractStitch';
 
 export default function App() {
   const [showEasterEgg, setShowEasterEgg] = useState(false);
@@ -54,6 +56,8 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/avinya" element={<Avinya />} />
           <Route path="/tesseract" element={<Tesseract />} />
+          <Route path="/avinya-stitch" element={<AvinyaStitch />} />
+          <Route path="/tesseract-stitch" element={<TesseractStitch />} />
           <Route path="*" element={<Home />} />
         </Routes>
         <Footer onEasterEggTrigger={() => setShowEasterEgg(true)} />

@@ -64,7 +64,7 @@ export default function Home() {
             <div className="bento-card col-span-2 slide-up" style={{ animationDelay: '0.1s' }}>
               <div className="bento-content">
                 <span className="bento-label">OPERATIONS</span>
-                <h3 className="bento-title">23+ ACTIVE R&D PROJECTS</h3>
+                <h3 className="bento-title">23+ IDEAS MATERIALIZED</h3>
                 <p className="bento-desc">
                   From custom flight controllers to hybrid solar-powered UAVs, our systems are built to solve complex real-world challenges in hostile environments.
                 </p>
