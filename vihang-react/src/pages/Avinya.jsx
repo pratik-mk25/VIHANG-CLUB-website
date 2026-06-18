@@ -60,6 +60,18 @@ const pioneers = [
   }
 ];
 
+const projects = [
+  {
+    name: "Mission Tracker",
+    desc: "The very first system deployed by Avinya. A dedicated platform to track, monitor, and coordinate our internal missions and team progress.",
+    link: "https://mission-tracker-vihang.vercel.app/"
+  },
+  {
+    name: "Avinya Chat Bot",
+    desc: "An intelligent conversational agent built to assist, guide, and streamline interactions within the club's digital ecosystem.",
+    link: "#"
+  }
+];
 
 // Buttery smooth animation config
 const fadeUpConfig = {
@@ -167,6 +179,62 @@ export default function Avinya() {
               <h4 className="fable-relic-title" style={{ color: 'rgba(255,255,255,0.4)', fontSize: '1rem', letterSpacing: '0.2em' }}>03</h4>
               <p className="fable-relic-desc" style={{ fontSize: '1.5rem', color: '#ffffff', fontFamily: 'var(--fable-serif)' }}>Leveraging software technology in the service and growth of Bharat</p>
             </motion.div>
+          </div>
+        </section>
+
+        {/* Avinya Projects */}
+        <section className="fable-section fable-container">
+          <motion.h2 
+            className="fable-section-title"
+            {...fadeUpConfig}
+          >
+            Avinya Projects
+          </motion.h2>
+
+          <div className="fable-relic-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+            {projects.map((proj, i) => (
+              <motion.div 
+                key={proj.name}
+                className="fable-relic-card"
+                initial={{ opacity: 0, scale: 0.95, y: 30 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.1 * i }}
+              >
+                <h4 className="fable-relic-title" style={{ color: 'rgba(255,255,255,0.4)', fontSize: '1rem', letterSpacing: '0.2em', textTransform: 'uppercase' }}>SYSTEM 0{i+1}</h4>
+                <p className="fable-relic-desc" style={{ fontSize: '1.8rem', color: '#ffffff', fontFamily: 'var(--fable-serif)', margin: '1rem 0' }}>{proj.name}</p>
+                <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1rem', lineHeight: '1.6', marginBottom: '2rem' }}>{proj.desc}</p>
+                {proj.link !== '#' ? (
+                  <a href={proj.link} target="_blank" rel="noreferrer" style={{ 
+                    display: 'inline-block', 
+                    padding: '0.8rem 1.5rem', 
+                    background: 'rgba(255,255,255,0.05)', 
+                    color: '#fff', 
+                    textDecoration: 'none', 
+                    border: '1px solid rgba(255,255,255,0.2)',
+                    textTransform: 'uppercase',
+                    fontSize: '0.8rem',
+                    letterSpacing: '0.1em',
+                    transition: 'background 0.2s'
+                  }}>
+                    Launch System →
+                  </a>
+                ) : (
+                  <span style={{ 
+                    display: 'inline-block', 
+                    padding: '0.8rem 1.5rem', 
+                    background: 'rgba(255,255,255,0.02)', 
+                    color: 'rgba(255,255,255,0.3)', 
+                    border: '1px solid rgba(255,255,255,0.1)',
+                    textTransform: 'uppercase',
+                    fontSize: '0.8rem',
+                    letterSpacing: '0.1em'
+                  }}>
+                    In Development
+                  </span>
+                )}
+              </motion.div>
+            ))}
           </div>
         </section>
 

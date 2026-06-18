@@ -2,8 +2,8 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 2.5rem;
-  border: 1px solid var(--border);
+  margin-bottom: 4rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   width: fit-content;
   margin-left: auto;
   margin-right: auto;
@@ -11,12 +11,15 @@
 
 .year-btn {
   font-family: var(--font-hud);
-  font-size: .65rem;
+  font-size: .8rem;
   letter-spacing: .15em;
-  padding: .6rem 1.4rem;
+  padding: 1rem 2rem;
   color: var(--text-dim);
-  border-right: 1px solid var(--border);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
   transition: all .2s;
+  background: transparent;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 .year-btn:last-child {
@@ -25,224 +28,154 @@
 
 .year-btn.active {
   color: var(--bg);
-  background: var(--gold);
+  background: #fff; /* Stark white active state for brutalism */
 }
 
 .year-btn:hover:not(.active) {
-  color: var(--gold);
-  background: rgba(255, 176, 0, .06);
-}
-
-.team-cat-tabs {
-  display: flex;
-  justify-content: center;
-  gap: .5rem;
-  flex-wrap: wrap;
-  margin-bottom: 3rem;
-}
-
-.team-tab {
-  font-family: var(--font-mono);
-  font-size: .55rem;
-  letter-spacing: .18em;
-  padding: .55rem 1.3rem;
-  border: 1px solid var(--border);
-  color: var(--text-dim);
-  transition: all .2s;
-}
-
-.team-tab.active {
-  color: var(--bg);
-  background: var(--gold);
-  border-color: var(--gold);
-}
-
-.team-tab:hover:not(.active) {
-  color: var(--gold);
-  border-color: rgba(255, 176, 0, .35);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .team-year-photo {
-  border: 1px solid var(--border);
-  background: var(--bg3);
-  padding: 3rem;
-  text-align: center;
-  margin-bottom: 3rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--bg);
+  margin-bottom: 4rem;
   position: relative;
   overflow: hidden;
 }
 
-.team-year-photo::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(255, 176, 0, .04), transparent);
-}
-
-.team-photo-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 220px;
-  border: 1px dashed rgba(255, 176, 0, .2);
-  margin-bottom: 1rem;
-}
-
-.team-photo-placeholder span {
-  font-family: var(--font-mono);
-  font-size: .6rem;
-  letter-spacing: .2em;
-  color: var(--text-dim);
+.team-photo-image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .team-photo-caption {
   font-family: var(--font-mono);
-  font-size: .55rem;
+  font-size: .65rem;
   letter-spacing: .2em;
-  color: var(--gold);
+  color: var(--text-dim);
+  text-transform: uppercase;
 }
 
-.team-grid {
-  display: grid;
-  gap: 1.2rem;
+/* ANDURIL BRUTALIST STYLES */
+
+.anduril-section {
+  margin-bottom: 6rem;
 }
 
-.team-grid.mentors {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 280px));
-  justify-content: center;
-  gap: 20px;
-}
-
-.team-grid.core {
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-}
-
-.team-grid.members {
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-}
-
-.team-card {
-  border: 1px solid var(--border);
-  background: var(--bg3);
-  padding: 1.5rem;
-  transition: all .3s;
-}
-
-.team-card:hover {
-  border-color: rgba(255, 176, 0, .3);
-  background: #181500;
-}
-
-.team-avatar {
-  width: 120px;
-  height: 120px;
-  border: 1px solid var(--gold);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.anduril-section-header {
   font-family: var(--font-hud);
   font-size: 2rem;
   font-weight: 700;
-  color: var(--gold);
-  background: rgba(255, 176, 0, .08);
-  margin-bottom: 1rem;
+  letter-spacing: .05em;
+  color: #fff;
+  margin: 0 0 2rem 0;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 1rem;
 }
 
-.team-name {
-  font-family: var(--font-hud);
-  font-size: .85rem;
-  letter-spacing: .08em;
-  color: var(--text);
-  margin-bottom: .2rem;
+.anduril-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.team-role {
-  font-family: var(--font-mono);
-  font-size: .55rem;
-  letter-spacing: .12em;
-  color: var(--gold);
-}
-
-.team-dept {
-  font-family: var(--font-body);
-  font-size: .8rem;
-  font-weight: 300;
-  color: var(--text-dim);
-  margin-top: .2rem;
-}
-
-.team-links {
+.anduril-card {
+  background: var(--bg);
+  position: relative;
   display: flex;
-  gap: .5rem;
-  margin-top: .8rem;
+  flex-direction: column;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
 }
 
-.team-link {
-  width: 30px;
-  height: 30px;
-  border: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-mono);
-  font-size: .42rem;
-  color: var(--text-dim);
-  transition: all .2s;
-  cursor: pointer;
+.anduril-img-wrapper {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: #0a0a0a;
+  position: relative;
 }
 
-.team-link:hover {
-  color: var(--gold);
-  border-color: var(--gold);
-}
-
-.member-card {
-  border: 1px solid var(--border);
-  background: var(--bg3);
-  padding: 1rem;
-  text-align: center;
-  transition: all .3s;
-}
-
-.member-card:hover {
-  border-color: rgba(255, 176, 0, .3);
-  background: #181500;
-}
-
-.member-avatar {
-  width: 80px;
-  height: 80px;
-  border: 1px solid rgba(255, 176, 0, .4);
-  font-family: var(--font-hud);
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--gold);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255, 176, 0, .05);
-  margin: 0 auto .6rem;
-}
-
-.member-name {
-  font-family: var(--font-mono);
-  font-size: .6rem;
-  letter-spacing: .1em;
-  color: var(--text);
-}
-
-.member-role {
-  font-family: var(--font-body);
-  font-size: .75rem;
-  font-weight: 300;
-  color: var(--text-dim);
-  margin-top: .15rem;
-}
-
-.team-avatar img,
-.member-avatar img {
+.anduril-img-wrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top center;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.anduril-card:hover .anduril-img-wrapper img {
+  transform: scale(1.03);
+}
+
+.anduril-initials {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-hud);
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 0.1);
+  background: #050505;
+  transition: all 0.4s ease;
+}
+
+.anduril-card:hover .anduril-initials {
+  color: var(--gold);
+  background: rgba(255, 176, 0, 0.05);
+}
+
+.anduril-info {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--bg);
+  transition: background 0.4s ease;
+  flex-grow: 1;
+}
+
+.anduril-card:hover .anduril-info {
+  background: #0a0a0a;
+}
+
+.anduril-name {
+  font-family: var(--font-hud), sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 0.05em;
+  margin: 0 0 0.4rem 0;
+}
+
+.anduril-role {
+  font-family: var(--font-mono), sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin: 0 0 0.5rem 0;
+}
+
+.anduril-dept {
+  font-family: var(--font-body), sans-serif;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .anduril-grid {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
+  .anduril-section-header {
+    font-size: 1.5rem;
+  }
 }
