@@ -2,13 +2,49 @@ import React from 'react';
 import './Contact.css';
 
 export default function Contact() {
-  const handleSend = (e) => {
+  const handleSend = async (e) => {
     e.preventDefault();
+    
+    const formData = new FormData(e.target);
+    formData.append("access_key", "f25e848e-a3f8-4b93-9e3e-7e2dff0ecb06");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
     const msg = document.getElementById('formMsg');
-    msg.style.display = 'block';
-    setTimeout(() => {
-      msg.style.display = 'none';
-    }, 4000);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: json
+      });
+      const result = await response.json();
+      
+      if (result.success) {
+        msg.style.display = 'block';
+        msg.innerHTML = '<span class="accent" style="color: #00ff88; margin-right: 5px">✓</span> TRANSMISSION SUCCESSFUL. STAND BY FOR RESPONSE.';
+        msg.style.borderColor = '#00ff88';
+        msg.style.color = 'var(--text-muted)';
+        e.target.reset();
+        setTimeout(() => {
+          msg.style.display = 'none';
+        }, 4000);
+      } else {
+        msg.style.display = 'block';
+        msg.innerHTML = '<span class="accent" style="color: #ff3333; margin-right: 5px">X</span> TRANSMISSION FAILED. PLEASE TRY AGAIN.';
+        msg.style.borderColor = '#ff3333';
+        msg.style.color = '#ff3333';
+      }
+    } catch (error) {
+        msg.style.display = 'block';
+        msg.innerHTML = '<span class="accent" style="color: #ff3333; margin-right: 5px">X</span> CONNECTION ERROR. PLEASE TRY AGAIN.';
+        msg.style.borderColor = '#ff3333';
+        msg.style.color = '#ff3333';
+    }
   };
 
   return (
@@ -73,19 +109,19 @@ export default function Contact() {
             <form onSubmit={handleSend} className="contact-form">
               <div className="input-group">
                 <label>IDENTIFICATION</label>
-                <input type="text" placeholder="YOUR NAME" required />
+                <input type="text" name="name" placeholder="YOUR NAME" required />
               </div>
               <div className="input-group">
                 <label>RETURN ADDRESS</label>
-                <input type="email" placeholder="YOUR EMAIL" required />
+                <input type="email" name="email" placeholder="YOUR EMAIL" required />
               </div>
               <div className="input-group">
                 <label>CLASSIFICATION</label>
-                <input type="text" placeholder="SUBJECT" required />
+                <input type="text" name="subject" placeholder="SUBJECT" required />
               </div>
               <div className="input-group">
                 <label>TRANSMISSION DATA</label>
-                <textarea placeholder="ENTER MESSAGE..." rows="6" required></textarea>
+                <textarea name="message" placeholder="ENTER MESSAGE..." rows="6" required></textarea>
               </div>
               <button type="submit" className="btn-submit">
                 [ TRANSMIT DATA ]
