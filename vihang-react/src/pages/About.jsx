@@ -44,8 +44,8 @@ export default function About() {
       <div className="container">
         
         <div className="section-header-row fade-in visible">
-          <p className="section-label">01 / ABOUT</p>
-          <h2 className="section-title">MISSION <span className="accent">LOG</span></h2>
+          <p className="section-label" style={{ color: '#9ca3af', fontSize: '0.85rem' }}>01 / ABOUT</p>
+          <h1 className="section-title">MISSION <span className="accent">LOG</span></h1>
         </div>
         
         <div className="about-grid">
@@ -124,6 +124,8 @@ export default function About() {
                  muted 
                  loop 
                  playsInline
+                 title="Vihang Club visual montage"
+                 aria-hidden="true"
                  style={{
                    position: 'absolute',
                    width: '100%',
@@ -144,8 +146,8 @@ export default function About() {
         <div className="about-goals fade-in visible" style={{ marginTop: '4rem', paddingTop: '4rem', borderTop: '1px solid var(--border)' }}>
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
 
-            <h3 className="section-title" style={{ fontSize: 'clamp(2rem, 5vw, 4rem)' }}>WHAT WE <span className="accent">STAND FOR</span></h3>
-            <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', color: 'var(--text-dim)', maxWidth: '500px', margin: '1rem auto 0', lineHeight: 1.7 }}>
+            <h2 className="section-title" style={{ fontSize: 'clamp(2rem, 5vw, 4rem)' }}>WHAT WE <span className="accent">STAND FOR</span></h2>
+            <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.85rem', color: '#9ca3af', maxWidth: '500px', margin: '1rem auto 0', lineHeight: 1.7 }}>
               DRIVING EXCELLENCE IN UAV TECHNOLOGY THROUGH A CLEAR SET OF GOALS THAT DEFINE OUR PATH FORWARD.
             </p>
           </div>

@@ -20,7 +20,7 @@
   top: 0;
   right: 0;
   font-family: var(--font-mono);
-  font-size: 0.6rem;
+  font-size: 0.75rem;
   letter-spacing: 0.3em;
   color: #ff3333;
   border: 1px solid #ff3333;
@@ -31,7 +31,7 @@
 
 .lead {
   font-size: 1.1rem;
-  color: var(--text-muted);
+  color: #e5e7eb;
   line-height: 1.8;
   margin-bottom: 2rem;
 }
@@ -81,9 +81,9 @@
 .stat-lbl {
   display: block;
   font-family: var(--font-mono);
-  font-size: 0.48rem;
+  font-size: 0.75rem;
   letter-spacing: 0.2em;
-  color: var(--text-dim);
+  color: #9ca3af;
   margin-top: 0.4rem;
   transition: color 0.2s;
 }
@@ -132,8 +132,8 @@
 
 .mission-id {
   font-family: var(--font-mono);
-  color: var(--text);
-  font-size: 0.7rem;
+  color: #d1d5db;
+  font-size: 0.8rem;
   letter-spacing: 0.1em;
   margin-top: 0.2rem;
 }
@@ -153,10 +153,10 @@
 
 .mission-item p {
   font-family: var(--font-body);
-  font-size: 0.9rem;
-  font-weight: 300;
-  color: var(--text-muted);
-  line-height: 1.5;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #d1d5db;
+  line-height: 1.6;
 }
 
 /* ───── VISUAL ───── */
@@ -226,9 +226,9 @@
 
 .scan-text {
   font-family: var(--font-mono);
-  color: var(--text-dim);
+  color: #9ca3af;
   letter-spacing: 0.2em;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   z-index: 2;
 }
 
@@ -287,9 +287,9 @@
 
 .goal-text {
   font-family: var(--font-body);
-  font-size: 0.9rem;
-  font-weight: 300;
-  color: var(--text-dim);
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #d1d5db;
   line-height: 1.6;
 }
 
