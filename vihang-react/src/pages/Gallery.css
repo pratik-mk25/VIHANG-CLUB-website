@@ -81,7 +81,7 @@
   font-family: var(--font-mono); 
   font-size: 0.75rem; 
   letter-spacing: 0.15em; 
-  color: #ff5722; /* High contrast orange */
+  color: #555555; /* Neutral dark gray for high contrast without being red */
   margin-bottom: 0.4rem; 
   font-weight: 600;
 }

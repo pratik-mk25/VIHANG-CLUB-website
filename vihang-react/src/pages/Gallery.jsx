@@ -51,7 +51,7 @@ export default function Gallery() {
                 </div>
               ) : (
                 <div className="gallery-thumb missing-img-card" style={{ height: '250px' }}>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="missing-icon" style={{marginBottom: '1rem'}}>
+                  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="missing-icon" style={{marginBottom: '1rem'}}>
                     <rect x="3" y="8" width="18" height="10" rx="2" ry="2" />
                     <line x1="7" y1="2" x2="7" y2="8" />
                     <line x1="17" y1="2" x2="17" y2="8" />
@@ -59,7 +59,7 @@ export default function Gallery() {
                     <circle cx="17" cy="3" r="1" />
                     <path d="M8 13h8" />
                   </svg>
-                  <span className="missing-text" style={{fontFamily: 'var(--font-mono)', fontSize: '0.75rem', letterSpacing: '0.2em', color: 'var(--text-dim)'}}>VISIT CLUB TO SEE</span>
+                  <span className="missing-text" style={{fontFamily: 'var(--font-mono)', fontSize: '0.75rem', letterSpacing: '0.2em', color: '#555555'}}>VISIT CLUB TO SEE</span>
                 </div>
               )}
               <div className="gallery-overlay masonry-overlay">

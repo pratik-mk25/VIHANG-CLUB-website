@@ -54,7 +54,7 @@ export default function Projects() {
         <div className="projects-grid">
           {filtered.map((p, idx) => (
             <div className="project-card fade-in visible" style={{ animationDelay: `${idx * 0.05}s` }} key={idx}>
-              {p.status === 'active' && <div className="dossier-stamp">CONFIDENTIAL</div>}
+              {/* {p.status === 'active' && <div className="dossier-stamp">CONFIDENTIAL</div>} */}
               
               <div className="project-thumb">
                 {p.img ? (
