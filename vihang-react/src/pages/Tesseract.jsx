@@ -114,22 +114,6 @@ export default function Tesseract() {
               TESSERACT
             </h1>
           </motion.div>
-          <motion.h3
-            className="tess-fullform"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1], delay: 0.6 }}
-            style={{
-              fontFamily: "'Inter', sans-serif",
-              fontSize: "clamp(0.7rem, 1.5vw, 1rem)",
-              letterSpacing: "0.2em",
-              textTransform: "uppercase",
-              color: "rgba(255, 255, 255, 0.5)",
-              marginBottom: "1.5rem"
-            }}
-          >
-            Testbed of Embedded Systems, Sensing, Electronics, Robotics, Autonomy, Control and Telemetry
-          </motion.h3>
           <motion.p 
             className="tess-subtitle"
             initial={{ opacity: 0, y: 20 }}
@@ -148,6 +132,26 @@ export default function Tesseract() {
           >
             Tesseract Envisions
           </motion.h2>
+
+          <motion.h3
+            className="tess-fullform"
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
+            style={{
+              fontFamily: "'Inter', sans-serif",
+              fontSize: "clamp(0.7rem, 1.5vw, 1rem)",
+              letterSpacing: "0.2em",
+              textTransform: "uppercase",
+              color: "rgba(255, 255, 255, 0.5)",
+              marginBottom: "3rem",
+              textAlign: "center",
+              marginTop: "-1rem"
+            }}
+          >
+            Testbed of Embedded Systems, Sensing, Electronics, Robotics, Autonomy, Control and Telemetry
+          </motion.h3>
 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '2rem' }}>
             <motion.div 
