@@ -101,20 +101,20 @@ export default function Contact() {
             
             <form onSubmit={handleSend} className="contact-form">
               <div className="input-group">
-                <label>IDENTIFICATION</label>
-                <input type="text" name="name" placeholder="YOUR NAME" required />
+                <label htmlFor="name">IDENTIFICATION</label>
+                <input type="text" id="name" name="name" placeholder="YOUR NAME" required aria-required="true" />
               </div>
               <div className="input-group">
-                <label>RETURN ADDRESS</label>
-                <input type="email" name="email" placeholder="YOUR EMAIL" required />
+                <label htmlFor="email">RETURN ADDRESS</label>
+                <input type="email" id="email" name="email" placeholder="YOUR EMAIL" required aria-required="true" />
               </div>
               <div className="input-group">
-                <label>CLASSIFICATION</label>
-                <input type="text" name="subject" placeholder="SUBJECT" required />
+                <label htmlFor="subject">CLASSIFICATION</label>
+                <input type="text" id="subject" name="subject" placeholder="SUBJECT" required aria-required="true" />
               </div>
               <div className="input-group">
-                <label>TRANSMISSION DATA</label>
-                <textarea name="message" placeholder="ENTER MESSAGE..." rows="6" required></textarea>
+                <label htmlFor="message">TRANSMISSION DATA</label>
+                <textarea id="message" name="message" placeholder="ENTER MESSAGE..." rows="6" required aria-required="true"></textarea>
               </div>
               <button type="submit" className="btn-submit">
                 [ TRANSMIT DATA ]

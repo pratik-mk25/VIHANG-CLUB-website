@@ -33,7 +33,7 @@ export default function Navbar() {
   return (
     <>
       <nav id="navbar" className={scrolled ? 'scrolled' : ''}>
-        <Link to="/" className="nav-logo" onClick={closeMobile}>
+        <Link to="/" className="nav-logo" aria-label="Vihang Club Home" onClick={closeMobile}>
           <div className="nav-logo-icon">
             <div className="logo-flip-container">
               <div className="logo-front">
@@ -64,6 +64,8 @@ export default function Navbar() {
 
         <button 
           className="hamburger" 
+          aria-label="Toggle navigation menu"
+          aria-expanded={mobileOpen}
           onClick={() => setMobileOpen(!mobileOpen)}
         >
           <span style={{ transform: mobileOpen ? 'rotate(45deg) translate(5px, 5px)' : 'none' }}></span>

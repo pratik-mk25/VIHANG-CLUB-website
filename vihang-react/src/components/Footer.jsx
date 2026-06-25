@@ -26,7 +26,7 @@ export default function Footer({ onEasterEggTrigger }) {
       <div className="container footer-inner">
         <div className="footer-grid">
           <div className="footer-brand">
-            <Link to="/" className="nav-logo">
+            <Link to="/" className="nav-logo" aria-label="Vihang Club Home">
               <div className="nav-logo-icon">
                 <img src={`${import.meta.env.BASE_URL}vihang-logo-transparent.png`} alt="Vihang Logo" style={{ height: '64px', objectFit: 'contain' }} />
               </div>
@@ -34,16 +34,16 @@ export default function Footer({ onEasterEggTrigger }) {
             </Link>
             <p className="footer-desc">PIONEERING HUB FOR DRONE RESEARCH AND DEVELOPMENT AT SSGMCE, SHEGAON.</p>
             <div className="social-links">
-              <a href="https://www.instagram.com/vihangdroneclub_ssgmce?igsh=MTBpNmVoYWRzY2pvaQ==" target="_blank" rel="noreferrer" className="social-icon">
+              <a href="https://www.instagram.com/vihangdroneclub_ssgmce?igsh=MTBpNmVoYWRzY2pvaQ==" target="_blank" rel="noreferrer" className="social-icon" aria-label="Instagram">
                 <Instagram size={20} strokeWidth={1.5} />
               </a>
-              <a href="https://www.linkedin.com/company/vihang-drone-club/" target="_blank" rel="noreferrer" className="social-icon">
+              <a href="https://www.linkedin.com/company/vihang-drone-club/" target="_blank" rel="noreferrer" className="social-icon" aria-label="LinkedIn">
                 <Linkedin size={20} strokeWidth={1.5} />
               </a>
-              <a href="https://youtube.com/@vihangdroneclubssgmce?si=qsOPABQH5tYZ2WVe" target="_blank" rel="noreferrer" className="social-icon">
+              <a href="https://youtube.com/@vihangdroneclubssgmce?si=qsOPABQH5tYZ2WVe" target="_blank" rel="noreferrer" className="social-icon" aria-label="YouTube">
                 <Youtube size={20} strokeWidth={1.5} />
               </a>
-              <a href="#" target="_blank" rel="noreferrer" className="social-icon placeholder" title="X (Twitter) - Coming Soon">
+              <a href="#" target="_blank" rel="noreferrer" className="social-icon placeholder" title="X (Twitter) - Coming Soon" aria-label="X (Twitter) - Coming Soon">
                 <Twitter size={20} strokeWidth={1.5} />
               </a>
             </div>

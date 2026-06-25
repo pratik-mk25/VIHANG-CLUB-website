@@ -139,6 +139,7 @@ export default function Team() {
             <button 
               key={year} 
               className={`year-btn ${selectedYear === year ? 'active' : ''}`}
+              aria-pressed={selectedYear === year}
               onClick={() => setSelectedYear(year)}
             >
               BATCH {year}

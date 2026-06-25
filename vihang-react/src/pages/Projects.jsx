@@ -46,9 +46,9 @@ export default function Projects() {
         <h2 className="section-title fade-in visible">WHAT WE <span className="accent">BUILD</span></h2>
 
         <div className="filter-bar fade-in visible">
-          <button className={`filter-btn ${filter === 'all' ? 'active' : ''}`} onClick={() => setFilter('all')}>ALL SYSTEMS</button>
-          <button className={`filter-btn ${filter === 'active' ? 'active' : ''}`} onClick={() => setFilter('active')}>ACTIVE</button>
-          <button className={`filter-btn ${filter === 'complete' ? 'active' : ''}`} onClick={() => setFilter('complete')}>COMPLETE</button>
+          <button className={`filter-btn ${filter === 'all' ? 'active' : ''}`} aria-pressed={filter === 'all'} onClick={() => setFilter('all')}>ALL SYSTEMS</button>
+          <button className={`filter-btn ${filter === 'active' ? 'active' : ''}`} aria-pressed={filter === 'active'} onClick={() => setFilter('active')}>ACTIVE</button>
+          <button className={`filter-btn ${filter === 'complete' ? 'active' : ''}`} aria-pressed={filter === 'complete'} onClick={() => setFilter('complete')}>COMPLETE</button>
         </div>
 
         <div className="projects-grid">

@@ -19,7 +19,7 @@ export default function Home() {
     <div className="page-wrapper">
       <section className="hero">
         <div className="hero-video-bg">
-          <video autoPlay loop muted playsInline className="hero-video">
+          <video autoPlay loop muted playsInline className="hero-video" title="Vihang Club background video showing drones in flight" aria-hidden="true">
             <source src={`${import.meta.env.BASE_URL}video/hero page video.mp4`} type="video/mp4" />
           </video>
           <div className="hero-video-overlay"></div>

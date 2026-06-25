@@ -34,6 +34,7 @@ export default function Gallery() {
             <button 
               key={c}
               className={`gallery-btn ${filter === c ? 'active' : ''}`}
+              aria-pressed={filter === c}
               onClick={() => setFilter(c)}
             >
               {c.toUpperCase()}
@@ -72,8 +73,8 @@ export default function Gallery() {
 
       {lightboxIndex !== null && filtered[lightboxIndex] && (
         <div className="lightbox-overlay" onClick={closeLightbox}>
-          <button className="lightbox-close" onClick={closeLightbox}>&times;</button>
-          <button className="lightbox-prev" onClick={prevImage}>&#10094;</button>
+          <button className="lightbox-close" aria-label="Close lightbox" onClick={closeLightbox}>&times;</button>
+          <button className="lightbox-prev" aria-label="Previous image" onClick={prevImage}>&#10094;</button>
           
           <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
             <img 
@@ -86,7 +87,7 @@ export default function Gallery() {
             </div>
           </div>
           
-          <button className="lightbox-next" onClick={nextImage}>&#10095;</button>
+          <button className="lightbox-next" aria-label="Next image" onClick={nextImage}>&#10095;</button>
         </div>
       )}
     </div>
