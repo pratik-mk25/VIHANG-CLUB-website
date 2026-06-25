@@ -15,7 +15,7 @@ footer {
 .footer-desc {
   font-family: var(--font-body);
   font-size: 0.85rem;
-  color: var(--text-dim);
+  color: #9ca3af;
   line-height: 1.8;
   margin-top: 1.5rem;
   max-width: 300px;
@@ -28,7 +28,7 @@ footer {
 }
 
 .social-icon {
-  color: var(--text-dim);
+  color: #9ca3af;
   transition: color 0.3s ease, transform 0.3s ease;
   display: flex;
   align-items: center;
@@ -64,7 +64,7 @@ footer {
 .footer-links a {
   font-family: var(--font-body);
   font-size: 0.8rem;
-  color: var(--text-dim);
+  color: #9ca3af;
   transition: color 0.2s;
 }
 
@@ -111,7 +111,7 @@ footer {
 .footer-copy {
   font-family: var(--font-mono);
   font-size: 0.75rem;
-  color: var(--text-dim);
+  color: #9ca3af;
 }
 
 .footer-tagline {
