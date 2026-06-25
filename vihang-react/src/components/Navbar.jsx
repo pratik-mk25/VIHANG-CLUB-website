@@ -19,8 +19,8 @@ export default function Navbar() {
 
   const navLinks = [
     { path: '/about', label: 'ABOUT' },
-    { path: '/avinya', label: 'AVINYA' },
-    { path: '/tesseract', label: 'TESSERACT' },
+    { path: '/avinya', label: 'SOFTWARE' },
+    { path: '/tesseract', label: 'HARDWARE' },
     { path: '/projects', label: 'PROJECTS' },
     { path: '/documentation', label: 'DOCUMENTATION' },
     { path: '/achievements', label: 'ACHIEVEMENTS' },
@@ -30,11 +30,9 @@ export default function Navbar() {
     { path: '/contact', label: 'CONTACT' },
   ];
 
-  const isLightRoute = location.pathname === '/avinya' || location.pathname === '/tesseract';
-
   return (
     <>
-      <nav id="navbar" className={`${scrolled ? 'scrolled' : ''} ${isLightRoute ? 'nav-light' : ''}`.trim()}>
+      <nav id="navbar" className={scrolled ? 'scrolled' : ''}>
         <Link to="/" className="nav-logo" onClick={closeMobile}>
           <div className="nav-logo-icon">
             <div className="logo-flip-container">

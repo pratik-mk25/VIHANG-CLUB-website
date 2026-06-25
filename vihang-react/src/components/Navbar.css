@@ -13,10 +13,11 @@ nav {
 
 nav.scrolled {
   padding: 1rem 4rem;
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border-light);
+  background: rgba(10, 10, 12, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .nav-logo {
@@ -187,20 +188,4 @@ nav.scrolled {
   .hamburger { display: flex; z-index: 901; }
 }
 
-/* Light Theme Overrides (Avinya/Tesseract pages) */
-nav.nav-light:not(.scrolled) .nav-logo-text {
-  color: #1a1a1a;
-}
-nav.nav-light:not(.scrolled) .nav-logo-subtext {
-  color: #b87300;
-}
-nav.nav-light:not(.scrolled) .nav-links a {
-  color: #1a1a1a;
-}
-nav.nav-light:not(.scrolled) .nav-links a:hover,
-nav.nav-light:not(.scrolled) .nav-links a.active {
-  color: #b87300;
-}
-nav.nav-light:not(.scrolled) .hamburger span {
-  background: #1a1a1a;
-}
+
