@@ -35,6 +35,7 @@
   left: 10%;
   width: 70vw;
   height: 70vw;
+  background-color: #0a0a0a;
   background: radial-gradient(circle, #0f766e 0%, transparent 70%);
   animation: tessFloat 22s ease-in-out infinite alternate;
 }
@@ -44,6 +45,7 @@
   right: -20%;
   width: 80vw;
   height: 80vw;
+  background-color: #0a0a0a;
   background: radial-gradient(circle, #4c1d95 0%, transparent 70%);
   animation: tessFloat 28s ease-in-out infinite alternate-reverse;
 }
@@ -53,6 +55,7 @@
   left: -20%;
   width: 60vw;
   height: 60vw;
+  background-color: #0a0a0a;
   background: radial-gradient(circle, #0369a1 0%, transparent 70%);
   animation: tessFloat 25s ease-in-out infinite alternate;
 }
@@ -90,6 +93,7 @@
   font-weight: 300;
   line-height: 1.1;
   margin: 0 0 1.5rem 0;
+  background-color: #0a0a0a;
   background: linear-gradient(180deg, #ffffff 0%, rgba(255,255,255,0.6) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -142,6 +146,7 @@
 }
 
 .tess-glass-card {
+  background-color: #0a0a0a;
   background: rgba(255, 255, 255, 0.02);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
@@ -156,6 +161,7 @@
 }
 
 .tess-glass-card:hover {
+  background-color: #0a0a0a;
   background: rgba(255, 255, 255, 0.04);
   transform: translateY(-8px);
 }
@@ -233,7 +239,7 @@
 }
 
 .tess-artifact-label {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   letter-spacing: 0.1em;
   color: rgba(255,255,255,0.4);
   text-transform: uppercase;

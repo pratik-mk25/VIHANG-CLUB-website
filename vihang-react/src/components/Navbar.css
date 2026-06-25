@@ -13,6 +13,7 @@ nav {
 
 nav.scrolled {
   padding: 1rem 4rem;
+  background-color: #0a0a0a;
   background: rgba(10, 10, 12, 0.85);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
@@ -106,7 +107,7 @@ nav.scrolled {
 
 .nav-logo-subtext {
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 0.25em;
   color: #FFD700; /* Golden accent for the subtext */
@@ -152,6 +153,7 @@ nav.scrolled {
   display: flex;
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #0a0a0a;
   background: rgba(0, 0, 0, 0.95);
   backdrop-filter: blur(30px);
   flex-direction: column;

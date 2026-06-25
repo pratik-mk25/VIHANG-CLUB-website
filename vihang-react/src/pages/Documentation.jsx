@@ -14,7 +14,7 @@ export default function Documentation() {
       <div className="container">
         <p className="section-label">03 / DOCUMENTATION</p>
         <div className="section-header-row">
-          <h2 className="section-title">SECURE <span className="accent">ARCHIVE</span></h2>
+          <h1 className="section-title">SECURE <span className="accent">ARCHIVE</span></h1>
         </div>
         <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', color: 'var(--text-dim)', marginTop: '1rem', maxWidth: '550px', lineHeight: 1.8 }}>
           ACCESS PROJECT DOCUMENTATION, RESEARCH REPORTS, TECHNICAL MANUALS, AND INTELLECTUAL PROPERTY RESOURCES.

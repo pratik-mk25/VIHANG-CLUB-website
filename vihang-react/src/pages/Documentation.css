@@ -1,6 +1,7 @@
 .doc-ledger {
   margin-top: 4rem;
   border: 1px solid var(--border-light);
+  background-color: #0a0a0a;
   background: rgba(255, 255, 255, 0.02);
   border-radius: 2px;
 }
@@ -12,7 +13,7 @@
   padding: 1.2rem 1.5rem;
   border-bottom: 1px solid var(--border-light);
   font-family: var(--font-mono);
-  font-size: 0.6rem;
+  font-size: 0.75rem;
   letter-spacing: 0.2em;
   color: var(--text-dim);
 }
@@ -32,6 +33,7 @@
 }
 
 .doc-ledger-row:hover {
+  background-color: #0a0a0a;
   background: rgba(255, 255, 255, 0.05);
   transform: translateX(5px);
   border-left: 2px solid var(--text);
@@ -39,14 +41,14 @@
 
 .doc-id {
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   letter-spacing: 0.1em;
   color: var(--text-dim);
 }
 
 .doc-class {
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   letter-spacing: 0.15em;
   color: var(--primary);
   display: flex;
@@ -80,14 +82,14 @@
 
 .doc-meta {
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   letter-spacing: 0.1em;
   color: var(--text-dim);
 }
 
 .btn-download {
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   letter-spacing: 0.15em;
   color: var(--bg);
   background: var(--text-muted);

@@ -55,7 +55,7 @@
 
 .contact-label {
   font-family: var(--font-mono);
-  font-size: 0.55rem;
+  font-size: 0.75rem;
   letter-spacing: 0.25em;
   color: var(--gold);
 }
@@ -112,14 +112,14 @@
 
 .social-id {
   font-family: var(--font-mono);
-  font-size: 0.5rem;
+  font-size: 0.75rem;
   color: var(--text-dim);
   letter-spacing: 0.1em;
 }
 
 .form-header {
   font-family: var(--font-mono);
-  font-size: 0.55rem;
+  font-size: 0.75rem;
   letter-spacing: 0.2em;
   color: #00ff88;
   display: flex;
@@ -157,7 +157,7 @@
 
 .input-group label {
   font-family: var(--font-mono);
-  font-size: 0.55rem;
+  font-size: 0.75rem;
   letter-spacing: 0.15em;
   color: var(--text-dim);
 }
@@ -207,12 +207,13 @@
 
 .form-msg {
   font-family: var(--font-mono);
-  font-size: 0.6rem;
+  font-size: 0.75rem;
   color: var(--text-muted);
   margin-top: 1.5rem;
   display: none;
   border: 1px solid #00ff88;
   padding: 1rem;
+  background-color: #0a0a0a;
   background: rgba(0, 255, 136, 0.05);
   letter-spacing: 0.1em;
 }

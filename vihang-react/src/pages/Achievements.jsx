@@ -349,7 +349,7 @@ export default function Achievements() {
     <div className="page-wrapper" style={{ paddingTop: '120px' }}>
       <div className="container">
         <p className="section-label">04 / ACHIEVEMENTS</p>
-        <h2 className="section-title">MISSION <span className="accent">LOG</span></h2>
+        <h1 className="section-title">MISSION <span className="accent">LOG</span></h1>
         
         <div className="mission-log-wrapper">
           <div className="log-header">

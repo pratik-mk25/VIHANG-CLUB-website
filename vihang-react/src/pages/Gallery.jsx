@@ -26,7 +26,7 @@ export default function Gallery() {
       <div className="container">
         <p className="section-label">07 / IN THE FIELD</p>
         <div className="section-header-row">
-          <h2 className="section-title">IN THE<br/><span className="accent">FIELD</span></h2>
+          <h1 className="section-title">IN THE<br/><span className="accent">FIELD</span></h1>
         </div>
         
         <div className="gallery-filter" style={{ marginTop: '3rem' }}>

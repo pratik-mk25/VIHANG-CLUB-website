@@ -32,12 +32,14 @@
   position: absolute;
   top: 0; bottom: 0; left: 50%;
   width: 1px;
+  background-color: #0a0a0a;
   background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.1), transparent);
 }
 .crosshair-h {
   position: absolute;
   left: 0; right: 0; top: 50%;
   height: 1px;
+  background-color: #0a0a0a;
   background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.1), transparent);
 }
 
@@ -65,7 +67,7 @@
 
 .hero-eyebrow {
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   letter-spacing: 0.4em;
   color: var(--text-dim);
   margin-bottom: 2rem;
@@ -107,6 +109,7 @@
 }
 
 .fade-w {
+  background-color: #0a0a0a;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, var(--text) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -141,6 +144,7 @@
 .hero-video-overlay {
   position: absolute;
   inset: 0;
+  background-color: #0a0a0a;
   background: radial-gradient(circle at center, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.8) 100%);
   z-index: 1;
 }
@@ -153,7 +157,7 @@
 
 .btn-solid {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   letter-spacing: 0.15em;
   background: var(--text);
   color: var(--bg);
@@ -166,7 +170,7 @@
 
 .btn-outline {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   letter-spacing: 0.15em;
   background: transparent;
   color: var(--text);
@@ -176,6 +180,7 @@
 }
 .btn-outline:hover {
   border-color: var(--text);
+  background-color: #0a0a0a;
   background: rgba(255, 255, 255, 0.05);
 }
 
@@ -194,7 +199,7 @@
 }
 .tel-label {
   font-family: var(--font-mono);
-  font-size: 0.45rem;
+  font-size: 0.75rem;
   letter-spacing: 0.25em;
   color: var(--text-dim);
 }
@@ -205,7 +210,7 @@
   letter-spacing: 0.05em;
 }
 .tel-unit {
-  font-size: 0.6rem;
+  font-size: 0.75rem;
   color: var(--text-muted);
 }
 .tel-value.ok {
@@ -274,7 +279,7 @@
 
 .bento-label {
   font-family: var(--font-mono);
-  font-size: 0.55rem;
+  font-size: 0.75rem;
   letter-spacing: 0.25em;
   color: var(--text-dim);
   display: flex;
@@ -309,7 +314,7 @@
 
 .bento-link {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   letter-spacing: 0.15em;
   color: var(--text);
   transition: color 0.3s;

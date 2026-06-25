@@ -43,7 +43,7 @@ export default function Projects() {
     <div className="page-wrapper" style={{ paddingTop: '120px' }}>
       <div className="container">
         <p className="section-label fade-in visible">02 / PROJECTS</p>
-        <h2 className="section-title fade-in visible">WHAT WE <span className="accent">BUILD</span></h2>
+        <h1 className="section-title fade-in visible">WHAT WE <span className="accent">BUILD</span></h1>
 
         <div className="filter-bar fade-in visible">
           <button className={`filter-btn ${filter === 'all' ? 'active' : ''}`} aria-pressed={filter === 'all'} onClick={() => setFilter('all')}>ALL SYSTEMS</button>

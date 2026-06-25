@@ -232,7 +232,7 @@ export default function Internships() {
         
         <div className="ip-hero">
           <p className="section-label">05 / INTERNSHIP &amp; PLACEMENT</p>
-          <h2 className="section-title">INDUSTRY <span className="accent">CONNECT</span></h2>
+          <h1 className="section-title">INDUSTRY <span className="accent">CONNECT</span></h1>
           <p className="ip-desc" style={{ marginTop: '1.5rem' }}>
             VIHANG CLUB BRIDGES THE GAP BETWEEN ACADEMIC RESEARCH AND INDUSTRY. 
             OUR MEMBERS HAVE SECURED PLACEMENTS AND INTERNSHIPS AT LEADING AEROSPACE, 

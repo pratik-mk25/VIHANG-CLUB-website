@@ -29,6 +29,7 @@
   border-right: none;
 }
 .ip-stat-block:hover {
+  background-color: #0a0a0a;
   background: rgba(255,255,255,0.02);
 }
 .ip-stat-val {
@@ -41,7 +42,7 @@
 }
 .ip-stat-lbl {
   font-family: var(--font-mono);
-  font-size: 0.55rem;
+  font-size: 0.75rem;
   letter-spacing: 0.2em;
   color: var(--text-dim);
   display: block;
@@ -57,7 +58,7 @@
 }
 .ip-company-tag {
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   letter-spacing: 0.15em;
   color: var(--text-muted);
 }
@@ -69,7 +70,7 @@
 }
 .ip-cmd-btn {
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   letter-spacing: 0.15em;
   padding: 0.8rem 1.5rem;
   color: var(--text-dim);
@@ -87,6 +88,7 @@
   background: var(--text);
 }
 .ip-cmd-btn:hover:not(.active) {
+  background-color: #0a0a0a;
   background: rgba(255,255,255,0.05);
   color: var(--text);
 }
@@ -123,7 +125,7 @@
 
 .dossier-status {
   font-family: var(--font-mono);
-  font-size: 0.55rem;
+  font-size: 0.75rem;
   letter-spacing: 0.2em;
   padding: 0.2rem 0.5rem;
   border: 1px solid var(--primary);
@@ -137,7 +139,7 @@
 
 .dossier-id {
   font-family: var(--font-mono);
-  font-size: 0.6rem;
+  font-size: 0.75rem;
   color: var(--text-dim);
 }
 
@@ -155,7 +157,7 @@
 
 .dossier-org {
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   letter-spacing: 0.15em;
   color: var(--primary);
   margin-bottom: 1rem;
@@ -177,7 +179,7 @@
 
 .dossier-meta-pill {
   font-family: var(--font-mono);
-  font-size: 0.6rem;
+  font-size: 0.75rem;
   letter-spacing: 0.1em;
   color: var(--text-muted);
   background: var(--bg3);
@@ -194,5 +196,5 @@
   .ip-stats-grid { grid-template-columns: 1fr; }
   .ip-stat-block { border-right: none !important; border-bottom: 1px solid var(--border-light); }
   .ip-stat-block:last-child { border-bottom: none; }
-  .ip-cmd-btn { padding: 0.8rem 1rem; font-size: 0.55rem; }
+  .ip-cmd-btn { padding: 0.8rem 1rem; font-size: 0.75rem; }
 }

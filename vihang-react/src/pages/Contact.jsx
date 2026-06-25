@@ -46,7 +46,7 @@ export default function Contact() {
         
         <div className="fade-in visible">
           <p className="section-label">08 / CONTACT</p>
-          <h2 className="section-title">GET IN <span className="accent">TOUCH</span></h2>
+          <h1 className="section-title">GET IN <span className="accent">TOUCH</span></h1>
         </div>
 
         <div className="contact-grid fade-in visible">

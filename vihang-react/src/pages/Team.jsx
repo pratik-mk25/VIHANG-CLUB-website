@@ -130,7 +130,7 @@ export default function Team() {
       <div className="container">
         <div className="section-header-row fade-in visible">
           <p className="section-label">06 / TEAM</p>
-          <h2 className="section-title">PEOPLE OF <span className="accent">VIHANG</span></h2>
+          <h1 className="section-title">PEOPLE OF <span className="accent">VIHANG</span></h1>
         </div>
 
         {/* Year Timeline Buttons */}
