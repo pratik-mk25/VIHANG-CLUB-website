@@ -103,14 +103,14 @@ export default function Avinya() {
             initial={{ opacity: 0, filter: "blur(20px)", y: 30 }}
             animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
             transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-            style={{ width: "100%", maxWidth: "1200px", margin: "0 auto 4rem auto", position: "relative", display: "flex", justifyContent: "center", alignItems: "center", minHeight: "500px" }}
+            style={{ width: "100%", maxWidth: "1200px", margin: "0 auto 1rem auto", position: "relative", display: "flex", justifyContent: "center", alignItems: "center", minHeight: "550px", paddingTop: "6rem" }}
           >
-            <div style={{ position: "absolute", inset: 0, display: "flex", justifyContent: "center", gap: "1rem", width: "100%", overflow: "hidden", zIndex: 1 }}>
-              <img src="/idols/alan-turing.jpg" alt="Alan Turing" style={{ width: "18%", height: "500px", objectFit: "cover", filter: "grayscale(100%) contrast(1.2)" }} />
-              <img src="/idols/apj-abdul-kalam.jpg" alt="A.P.J. Abdul Kalam" style={{ width: "18%", height: "500px", objectFit: "cover", filter: "grayscale(100%) contrast(1.2)" }} />
-              <img src="/idols/cv_raman.png" alt="C.V. Raman" style={{ width: "18%", height: "500px", objectFit: "cover", filter: "grayscale(100%) contrast(1.2)" }} />
-              <img src="/idols/srinivasa-ramanujan.jpg" alt="Srinivasa Ramanujan" style={{ width: "18%", height: "500px", objectFit: "cover", filter: "grayscale(100%) contrast(1.2)" }} />
-              <img src="/idols/vijay-bhatkar.jpg" alt="Vijay Bhatkar" style={{ width: "18%", height: "500px", objectFit: "cover", filter: "grayscale(100%) contrast(1.2)" }} />
+            <div style={{ position: "absolute", inset: 0, top: "6rem", display: "flex", justifyContent: "center", gap: "1rem", width: "100%", overflow: "hidden", zIndex: 1 }}>
+              <img src="/idols/alan-turing.jpg" alt="Alan Turing" style={{ width: "18%", height: "400px", objectFit: "cover", filter: "grayscale(100%) contrast(1.2)" }} />
+              <img src="/idols/apj-abdul-kalam.jpg" alt="A.P.J. Abdul Kalam" style={{ width: "18%", height: "400px", objectFit: "cover", filter: "grayscale(100%) contrast(1.2)" }} />
+              <img src="/idols/cv_raman.png" alt="C.V. Raman" style={{ width: "18%", height: "400px", objectFit: "cover", filter: "grayscale(100%) contrast(1.2)" }} />
+              <img src="/idols/srinivasa-ramanujan.jpg" alt="Srinivasa Ramanujan" style={{ width: "18%", height: "400px", objectFit: "cover", filter: "grayscale(100%) contrast(1.2)" }} />
+              <img src="/idols/vijay-bhatkar.jpg" alt="Vijay Bhatkar" style={{ width: "18%", height: "400px", objectFit: "cover", filter: "grayscale(100%) contrast(1.2)" }} />
             </div>
             <h1 style={{ 
               position: "relative",
@@ -128,15 +128,72 @@ export default function Avinya() {
             }}>
               AVINYA
             </h1>
-          </motion.div>
-          <motion.p 
-            className="fable-subtitle"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.6 }}
-          >
-            From Turing's universal machine to Bhatkar's PARAM, a lineage of thinkers proved that intelligence must be built — not borrowed. Avinya carries that conviction forward in software, artificial intelligence, and the pursuit of a self-reliant Bharat.
-          </motion.p>
+            </motion.div>
+
+            {/* Avinya Projects - Moved Here */}
+            <div style={{ width: '100%', marginBottom: '4rem', marginTop: '0' }}>
+              <motion.h2 
+                className="fable-section-title"
+                {...fadeUpConfig}
+              >
+                Avinya Projects
+              </motion.h2>
+
+              <div className="fable-relic-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 450px))', justifyContent: 'center', gap: '2rem' }}>
+                {projects.map((proj, i) => (
+                  <motion.div 
+                    key={proj.name}
+                    className="fable-relic-card"
+                    initial={{ opacity: 0, scale: 0.95, y: 30 }}
+                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.1 * i }}
+                  >
+                    <h4 className="fable-relic-title" style={{ color: 'rgba(255,255,255,0.4)', fontSize: '1rem', letterSpacing: '0.2em', textTransform: 'uppercase' }}>SYSTEM 0{i+1}</h4>
+                    <p className="fable-relic-desc" style={{ fontSize: '1.8rem', color: '#ffffff', fontFamily: 'var(--fable-serif)', margin: '1rem 0' }}>{proj.name}</p>
+                    <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1rem', lineHeight: '1.6', marginBottom: '2rem' }}>{proj.desc}</p>
+                    {proj.link !== '#' ? (
+                      <a href={proj.link} target="_blank" rel="noreferrer" style={{ 
+                        display: 'inline-block', 
+                        padding: '0.8rem 1.5rem', 
+                        background: 'rgba(255,255,255,0.05)', 
+                        color: '#fff', 
+                        textDecoration: 'none', 
+                        border: '1px solid rgba(255,255,255,0.2)',
+                        textTransform: 'uppercase',
+                        fontSize: '0.8rem',
+                        letterSpacing: '0.1em',
+                        transition: 'background 0.2s'
+                      }}>
+                        Launch System →
+                      </a>
+                    ) : (
+                      <span style={{ 
+                        display: 'inline-block', 
+                        padding: '0.8rem 1.5rem', 
+                        background: 'rgba(255,255,255,0.02)', 
+                        color: 'rgba(255,255,255,0.3)', 
+                        border: '1px solid rgba(255,255,255,0.1)',
+                        textTransform: 'uppercase',
+                        fontSize: '0.8rem',
+                        letterSpacing: '0.1em'
+                      }}>
+                        In Development
+                      </span>
+                    )}
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            <motion.p 
+              className="fable-subtitle"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.6 }}
+            >
+              From Turing's universal machine to Bhatkar's PARAM, a lineage of thinkers proved that intelligence must be built — not borrowed. Avinya carries that conviction forward in software, artificial intelligence, and the pursuit of a self-reliant Bharat.
+            </motion.p>
         </section>
 
         {/* Avinya Envisions */}
@@ -182,61 +239,7 @@ export default function Avinya() {
           </div>
         </section>
 
-        {/* Avinya Projects */}
-        <section className="fable-section fable-container">
-          <motion.h2 
-            className="fable-section-title"
-            {...fadeUpConfig}
-          >
-            Avinya Projects
-          </motion.h2>
 
-          <div className="fable-relic-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
-            {projects.map((proj, i) => (
-              <motion.div 
-                key={proj.name}
-                className="fable-relic-card"
-                initial={{ opacity: 0, scale: 0.95, y: 30 }}
-                whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.1 * i }}
-              >
-                <h4 className="fable-relic-title" style={{ color: 'rgba(255,255,255,0.4)', fontSize: '1rem', letterSpacing: '0.2em', textTransform: 'uppercase' }}>SYSTEM 0{i+1}</h4>
-                <p className="fable-relic-desc" style={{ fontSize: '1.8rem', color: '#ffffff', fontFamily: 'var(--fable-serif)', margin: '1rem 0' }}>{proj.name}</p>
-                <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1rem', lineHeight: '1.6', marginBottom: '2rem' }}>{proj.desc}</p>
-                {proj.link !== '#' ? (
-                  <a href={proj.link} target="_blank" rel="noreferrer" style={{ 
-                    display: 'inline-block', 
-                    padding: '0.8rem 1.5rem', 
-                    background: 'rgba(255,255,255,0.05)', 
-                    color: '#fff', 
-                    textDecoration: 'none', 
-                    border: '1px solid rgba(255,255,255,0.2)',
-                    textTransform: 'uppercase',
-                    fontSize: '0.8rem',
-                    letterSpacing: '0.1em',
-                    transition: 'background 0.2s'
-                  }}>
-                    Launch System →
-                  </a>
-                ) : (
-                  <span style={{ 
-                    display: 'inline-block', 
-                    padding: '0.8rem 1.5rem', 
-                    background: 'rgba(255,255,255,0.02)', 
-                    color: 'rgba(255,255,255,0.3)', 
-                    border: '1px solid rgba(255,255,255,0.1)',
-                    textTransform: 'uppercase',
-                    fontSize: '0.8rem',
-                    letterSpacing: '0.1em'
-                  }}>
-                    In Development
-                  </span>
-                )}
-              </motion.div>
-            ))}
-          </div>
-        </section>
 
 
         {/* Visionaries Grid */}

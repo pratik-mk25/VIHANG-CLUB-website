@@ -22,24 +22,10 @@ export default function Home() {
           <video autoPlay loop muted playsInline className="hero-video" title="Vihang Club background video showing drones in flight" aria-hidden="true">
             <source src={`${import.meta.env.BASE_URL}video/hero page video.mp4`} type="video/mp4" />
           </video>
-          <div className="hero-video-overlay"></div>
-        </div>
-        <div 
-          className="hero-grid-bg" 
-          style={{ transform: `translate(${mousePos.x}px, ${mousePos.y}px)` }}
-        ></div>
-        
-        {/* Decorative Grid Lines */}
-        <div className="hero-crosshairs">
-          <div className="crosshair-v"></div>
-          <div className="crosshair-h"></div>
         </div>
 
         <div className="container hero-content">
-          <div className="hero-eyebrow fade-up" style={{ animationDelay: '0.1s' }}>
-            <span className="dot pulse-dot"></span>
 
-          </div>
           <h1 className="hero-title fade-up" style={{ animationDelay: '0.2s' }}>
             <span className="fade-w">W</span>HERE IDEAS<br/>
             <span className="accent">TAKE FLIGHT</span>
