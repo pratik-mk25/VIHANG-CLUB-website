@@ -10,12 +10,12 @@ const teamData = [
 
   // BATCH 2024 CORE TEAM
   { name: `Deep Goje`, role: `Captain`, dept: `MECHANICAL`, img: `/team img/batch-25/deep goje.jpg`, batch: `2024` },
-  { name: `Tejas Kale`, role: `Vice Captain`, dept: `E&TC`, img: `/team img/batch-25/tejas kale.jpg`, batch: `2024` },
-  { name: `Shreeharsh Apte`, role: `Core Team`, dept: `MECHANICAL`, img: `/team img/batch-25/shreeharsh.jpg`, batch: `2024` },
-  { name: `Yuraj Harne`, role: `Core Team`, dept: `MECHANICAL`, img: `/team img/batch-25/yuvraj harne.jpg`, batch: `2024` },
-  { name: `Lokesh Hiwarkar`, role: `Core Team`, dept: `E&TC`, img: `/team img/batch-25/lokesh.jpg`, batch: `2024` },
-  { name: `Vinay Wankhade`, role: `Core Team`, dept: `MECHANICAL`, img: `/team img/batch-25/vinay wankhade.jpg`, batch: `2024` },
-  { name: `Tejas Gaikwad`, role: `Core Team`, dept: `E&TC`, img: `/team img/batch-25/tejas gaikwad.jpg`, batch: `2024` },
+  { name: `Tejas Kale`, role: `Secretary`, dept: `E&TC`, img: `/team img/batch-25/tejas kale.jpg`, batch: `2024` },
+  { name: `Shreeharsh Apte`, role: `Vice Captain`, dept: `MECHANICAL`, img: `/team img/batch-25/shreeharsh.jpg`, batch: `2024` },
+  { name: `Yuraj Harne`, role: `Production Head`, dept: `MECHANICAL`, img: `/team img/batch-25/yuvraj harne.jpg`, batch: `2024` },
+  { name: `Lokesh Hiwarkar`, role: `Electronics Head`, dept: `E&TC`, img: `/team img/batch-25/lokesh.jpg`, batch: `2024` },
+  { name: `Vinay Wankhade`, role: `Production Head`, dept: `MECHANICAL`, img: `/team img/batch-25/vinay wankhade.jpg`, batch: `2024` },
+  { name: `Tejas Gaikwad`, role: `Research Head`, dept: `E&TC`, img: `/team img/batch-25/tejas gaikwad.jpg`, batch: `2024` },
 
   // BATCH 2025 CORE TEAM
   { name: `Tejas Kale`, role: `Captain`, dept: `E&TC`, img: `/team img/batch-25/tejas kale.jpg`, batch: `2025` },
