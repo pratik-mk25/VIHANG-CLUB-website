@@ -20,7 +20,7 @@ const teamData = [
   // BATCH 2025 CORE TEAM
   { name: `Tejas Kale`, role: `Captain`, dept: `E&TC`, img: `/team img/batch-25/tejas kale.jpg`, batch: `2025` },
   { name: `Kunal Pisudde`, role: `Vice Captain`, dept: `ELPO`, img: `/team img/batch-26/kunal.jpeg`, batch: `2025` },
-  { name: `Sahil Mathurkar`, role: `Secretary`, dept: `E&TC`, img: `/team img/fake.png`, batch: `2025` },
+  { name: `Sahil Mathurkar`, role: `Secretary`, dept: `E&TC`, img: `/team img/batch-25/Sahil_mathurkar.jpg`, batch: `2025` },
 
   // BATCH 2026 CORE TEAM
   { name: `Kunal Pisudde`, role: `Captain`, dept: `ELPO`, img: `/team img/batch-26/kunal.jpeg`, batch: `2026` },
@@ -37,7 +37,7 @@ const teamData = [
   // BATCH 2027 CORE TEAM
   { name: `Pratik Khadse`, role: `Captain`, dept: `E&TC`, img: `/team img/batch-26/pratikkhadse.png`, batch: `2027` },
   { name: `Nivrutti Raut`, role: `Secretary`, dept: `ELPO`, img: `/team img/batch-27/Nivrutti.jpg`, batch: `2027` },
-  { name: `Vaibhav Udapure`, role: `Electronics Head`, dept: `E&TC`, img: `/team img/fake.png`, batch: `2027` },
+  { name: `Vaibhav Udapure`, role: `Electronics Head`, dept: `E&TC`, img: `/team img/vaibhavu.jpeg`, batch: `2027` },
   { name: `Arpit There`, role: `Admin Head`, dept: `ELPO`, img: `/team img/batch-27/arpit.jpg`, batch: `2027` },
   { name: `Aditya Vaidya`, role: `Operations Head`, dept: `ELPO`, img: `/team img/batch-27/aditya.jpg`, batch: `2027` },
   { name: `Amitesh Chavan`, role: `Social Media Head`, dept: `E&TC`, img: `/team img/batch-27/Amitesh Chavhan.jpeg`, batch: `2027` },
@@ -46,7 +46,7 @@ const teamData = [
   // BATCH 2026 MEMBERS
   { name: `Parth Deshmukh`, role: `Member`, dept: `IT`, img: `/team img/parth.jpeg`, batch: `2026` },
   { name: `Nivrutti Raut`, role: `Member`, dept: `ELPO`, img: `/team img/batch-27/Nivrutti.jpg`, batch: `2026` },
-  { name: `Vaibhav Udapure`, role: `Member`, dept: `E&TC`, img: `/team img/fake.png`, batch: `2026` },
+  { name: `Vaibhav Udapure`, role: `Member`, dept: `E&TC`, img: `/team img/vaibhavu.jpeg`, batch: `2026` },
   { name: `Arpit There`, role: `Member`, dept: `ELPO`, img: `/team img/batch-27/arpit.jpg`, batch: `2026` },
   { name: `Aditya Vaidya`, role: `Member`, dept: `ELPO`, img: `/team img/batch-27/aditya.jpg`, batch: `2026` },
   { name: `Amitesh Chavan`, role: `Member`, dept: `E&TC`, img: `/team img/batch-27/Amitesh Chavhan.jpeg`, batch: `2026` },
@@ -60,9 +60,9 @@ const teamData = [
   { name: `Atharv Ingle`, role: `Member`, dept: `ELPO`, img: `/team img/batch-26/ath.jpg`, batch: `2025` },
   { name: `Atharva Raut`, role: `Member`, dept: `E&TC`, img: `/team img/batch-26/atharav.jpg`, batch: `2025` },
   // BATCH 2024 MEMBERS
-  { name: `Sahil Mathurkar`, role: `Member`, dept: `E&TC`, img: `/team img/fake.png`, batch: `2024` },
+  { name: `Sahil Mathurkar`, role: `Member`, dept: `E&TC`, img: `/team img/batch-25/Sahil_mathurkar.jpg`, batch: `2024` },
   // BATCH 2027 MEMBERS
-  { name: `Aniruddh Pote`, role: `Member`, dept: `MECH`, img: `/team img/fake.png`, batch: `2027` },
+  { name: `Aniruddh Pote`, role: `Member`, dept: `MECH`, img: `/team img/apote.jpeg`, batch: `2027` },
   { name: `Bhumika Bal`, role: `Member`, dept: `E&TC`, img: `/team img/batch-27/bhumika.jpeg`, batch: `2027` },
   { name: `Ganesh Tupkar`, role: `Member`, dept: `MECH`, img: `/team img/batch-27/ganesh.jpeg`, batch: `2027` },
   { name: `Gaurav Ingle`, role: `Member`, dept: `E&TC`, img: `/team img/batch-27/gauravi.jpeg`, batch: `2027` },
@@ -72,10 +72,10 @@ const teamData = [
   { name: `Piyush Dawange`, role: `Member`, dept: `IT`, img: `/team img/batch-27/pd.png`, batch: `2027` },
   { name: `Prachi Vairale`, role: `Member`, dept: `E&TC`, img: `/team img/batch-27/Prachi.jpeg`, batch: `2027` },
   { name: `Pratiksha Bawaskar`, role: `Member`, dept: `ELPO`, img: `/team img/batch-27/pratiksha.jpeg`, batch: `2027` },
-  { name: `Sanchit Deshmukh`, role: `Member`, dept: `IT`, img: `/team img/fake.png`, batch: `2027` },
+  { name: `Sanchit Deshmukh`, role: `Member`, dept: `IT`, img: `/team img/sanchitd.jpeg`, batch: `2027` },
   { name: `Shreya Deshmukh`, role: `Member`, dept: `E&TC`, img: `/team img/batch-27/shreya.jpeg`, batch: `2027` },
   { name: `Vedanti Damdhar`, role: `Member`, dept: `E&TC`, img: `/team img/batch-27/vedanti.jpeg`, batch: `2027` },
-  { name: `Riddhi Ambere`, role: `Member`, dept: `ELPO`, img: `/team img/fake.png`, batch: `2027` },
+  { name: `Riddhi Ambere`, role: `Member`, dept: `ELPO`, img: `/team img/riddhi.jpeg`, batch: `2027` },
 ];
 
 const yearData = {
