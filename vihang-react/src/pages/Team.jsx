@@ -39,9 +39,9 @@ const teamData = [
   { name: `Nivrutti Raut`, role: `Secretary`, dept: `ELPO`, img: `/team img/batch-27/Nivrutti.jpg`, batch: `2027` },
   { name: `Vaibhav Udapure`, role: `Electronics Head`, dept: `E&TC`, img: `/team img/vaibhavu.jpeg`, batch: `2027` },
   { name: `Arpit There`, role: `Admin Head`, dept: `ELPO`, img: `/team img/batch-27/arpit.jpg`, batch: `2027` },
+  { name: `Parth Deshmukh`, role: `Research Associate`, dept: `ELPO`, img: `/team img/parth.jpeg`, batch: `2027` },
   { name: `Aditya Vaidya`, role: `Operations Head`, dept: `ELPO`, img: `/team img/batch-27/aditya.jpg`, batch: `2027` },
   { name: `Amitesh Chavan`, role: `Social Media Head`, dept: `E&TC`, img: `/team img/batch-27/Amitesh Chavhan.jpeg`, batch: `2027` },
-  { name: `Parth Deshmukh`, role: `Research Associate`, dept: `ELPO`, img: `/team img/parth.jpeg`, batch: `2027` },
 
   // BATCH 2026 MEMBERS
   { name: `Parth Deshmukh`, role: `Member`, dept: `IT`, img: `/team img/parth.jpeg`, batch: `2026` },

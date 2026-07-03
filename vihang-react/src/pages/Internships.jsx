@@ -4,15 +4,15 @@ import './Internships.css';
 const ipData = {
   "stats": [
     {
-      "value": "11+",
+      "value": "15+",
       "label": "INTERNSHIPS"
     },
     {
-      "value": "8+",
+      "value": "15+",
       "label": "PLACEMENTS"
     },
     {
-      "value": "8+",
+      "value": "15+",
       "label": "ALUMNI"
     },
     {
@@ -22,12 +22,18 @@ const ipData = {
   ],
   "companies": [
     "IDEAFORGE",
-    "OP MOBILITY",
+    "PEPPERMINT ROBOTICS",
     "HYSTER-YELE",
     "ABB",
+    "FOX SOLUTIONS",
+    "TORRENT POWER",
+    "BUSH ELECTRONICS",
+    "IIT KHARAGPUR",
+    "OP MOBILITY",
     "INNOVA RUBBERS PVT",
     "MAKXENIA ENGINEERING PVT",
-    "INFOSYS"
+    "INFOSYS",
+    "FLASH ELECTRONICS"
   ],
   "cards": [
     {
@@ -218,6 +224,130 @@ const ipData = {
       "meta": [
         "2025",
         "MUMBAI"
+      ]
+    },
+    {
+      "type": "INTERNSHIP",
+      "name": "ARPIT THERE",
+      "org": "FLASH ELECTRONICS",
+      "role": "MANUFACTURING OF AUTOMOTIVE COMPONENTS AND ELECTRONICS.",
+      "meta": [
+        "2026",
+        "CHAKAN, PUNE",
+        "JUN-AUG"
+      ]
+    },
+    {
+      "type": "INTERNSHIP",
+      "name": "NIVRUTTI RAUT",
+      "org": "FLASH ELECTRONICS",
+      "role": "MANUFACTURING OF AUTOMOTIVE COMPONENTS AND ELECTRONICS.",
+      "meta": [
+        "2026",
+        "CHAKAN, PUNE",
+        "JUN-AUG"
+      ]
+    },
+    {
+      "type": "INTERNSHIP",
+      "name": "AMITESH CHAVAN",
+      "org": "FLASH ELECTRONICS",
+      "role": "MANUFACTURING OF AUTOMOTIVE COMPONENTS AND ELECTRONICS.",
+      "meta": [
+        "2026",
+        "CHAKAN, PUNE",
+        "JUN-AUG"
+      ]
+    },
+    {
+      "type": "INTERNSHIP",
+      "name": "ADITYA VAIDYA",
+      "org": "FOX SOLUTIONS",
+      "role": "PROVIDES AUTOMATION AND INDUSTRIAL SOLUTIONS.",
+      "meta": [
+        "2026",
+        "NASHIK",
+        "JUN-AUG"
+      ]
+    },
+    {
+      "type": "INTERNSHIP",
+      "name": "PARTH DESHMUKH",
+      "org": "FOX SOLUTIONS",
+      "role": "PROVIDES AUTOMATION AND INDUSTRIAL SOLUTIONS.",
+      "meta": [
+        "2026",
+        "NASHIK",
+        "JUN-AUG"
+      ]
+    },
+    {
+      "type": "PLACEMENT",
+      "name": "KUNAL PISUDDE",
+      "org": "TORRENT POWER",
+      "role": "GET",
+      "meta": [
+        "2026",
+        "MUMBAI"
+      ]
+    },
+    {
+      "type": "PLACEMENT",
+      "name": "MANTHAN KOLTE",
+      "org": "BUSH ELECTRONICS",
+      "role": "GET",
+      "meta": [
+        "2026",
+        "NASHIK"
+      ]
+    },
+    {
+      "type": "PLACEMENT",
+      "name": "PRANAV HARNE",
+      "org": "IDEAFORGE",
+      "role": "R&D INTERN",
+      "meta": [
+        "2026",
+        "NAVI MUMBAI"
+      ]
+    },
+    {
+      "type": "PLACEMENT",
+      "name": "ATHARV INGLE",
+      "org": "IIT KHARAGPUR",
+      "role": "RESEARCHER",
+      "meta": [
+        "2026"
+      ]
+    },
+    {
+      "type": "PLACEMENT",
+      "name": "ATHARVA RAUT",
+      "org": "FLASH ELECTRONICS",
+      "role": "GET",
+      "meta": [
+        "2026",
+        "PUNE"
+      ]
+    },
+    {
+      "type": "PLACEMENT",
+      "name": "RUSHIKESH PAYGHAN",
+      "org": "FLASH ELECTRONICS",
+      "role": "GET",
+      "meta": [
+        "2026",
+        "PUNE"
+      ]
+    },
+    {
+      "type": "PLACEMENT",
+      "name": "SAHIL KHANDARE",
+      "org": "PEPPERMINT ROBOTICS",
+      "role": "JUNIOR ENGINEER",
+      "meta": [
+        "2026",
+        "PUNE"
       ]
     }
   ]
