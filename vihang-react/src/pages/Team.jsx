@@ -132,7 +132,7 @@ export default function Team() {
 
   return (
     <div className="page-wrapper" style={{ paddingTop: '120px' }}>
-      <div className="container" style={{ zoom: 0.7 }}>
+      <div className="container team-desktop-scale">
         <div className="section-header-row fade-in visible">
           <p className="section-label">06 / TEAM</p>
           <h1 className="section-title">PEOPLE OF <span className="accent">VIHANG</span></h1>

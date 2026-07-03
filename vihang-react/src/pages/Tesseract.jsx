@@ -96,14 +96,14 @@ export default function Tesseract() {
             initial={{ opacity: 0, filter: "blur(20px)", y: 30 }}
             animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
             transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1], delay: 0.4 }}
-            style={{ width: "100%", maxWidth: "1200px", margin: "0 auto 1rem auto", position: "relative", display: "flex", justifyContent: "center", alignItems: "center", minHeight: "550px", paddingTop: "6rem" }}
+            style={{ width: "100%", maxWidth: "1200px", margin: "0 auto 1rem auto", position: "relative", display: "flex", justifyContent: "center", alignItems: "center", minHeight: "clamp(250px, 50vw, 550px)", paddingTop: "6rem" }}
           >
             <div style={{ position: "absolute", inset: 0, top: "6rem", display: "flex", justifyContent: "center", gap: "1rem", width: "100%", overflow: "hidden", zIndex: 1 }}>
-              <img src="/idols/homi-bhabha.jpg" alt="Homi Bhabha" style={{ width: "18%", height: "400px", objectFit: "cover", filter: "grayscale(100%) contrast(1.2)" }} />
-              <img src="/idols/vikram-sarabhai.jpg" alt="Vikram Sarabhai" style={{ width: "18%", height: "400px", objectFit: "cover", filter: "grayscale(100%) contrast(1.2)" }} />
-              <img src="/idols/jagdish-chandra-bose.jpg" alt="Jagdish Chandra Bose" style={{ width: "18%", height: "400px", objectFit: "cover", filter: "grayscale(100%) contrast(1.2)" }} />
-              <img src="/idols/nikola-tesla.jpg" alt="Nikola Tesla" style={{ width: "18%", height: "400px", objectFit: "cover", filter: "grayscale(100%) contrast(1.2)" }} />
-              <img src="/idols/narinder-singh-kapany.png" alt="Narinder Singh Kapany" style={{ width: "18%", height: "400px", objectFit: "cover", filter: "grayscale(100%) contrast(1.2)" }} />
+              <img src="/idols/homi-bhabha.jpg" alt="Homi Bhabha" style={{ width: "18%", height: "clamp(120px, 35vw, 400px)", objectFit: "cover", filter: "grayscale(100%) contrast(1.2)" }} />
+              <img src="/idols/vikram-sarabhai.jpg" alt="Vikram Sarabhai" style={{ width: "18%", height: "clamp(120px, 35vw, 400px)", objectFit: "cover", filter: "grayscale(100%) contrast(1.2)" }} />
+              <img src="/idols/jagdish-chandra-bose.jpg" alt="Jagdish Chandra Bose" style={{ width: "18%", height: "clamp(120px, 35vw, 400px)", objectFit: "cover", filter: "grayscale(100%) contrast(1.2)" }} />
+              <img src="/idols/nikola-tesla.jpg" alt="Nikola Tesla" style={{ width: "18%", height: "clamp(120px, 35vw, 400px)", objectFit: "cover", filter: "grayscale(100%) contrast(1.2)" }} />
+              <img src="/idols/narinder-singh-kapany.png" alt="Narinder Singh Kapany" style={{ width: "18%", height: "clamp(120px, 35vw, 400px)", objectFit: "cover", filter: "grayscale(100%) contrast(1.2)" }} />
             </div>
             <h1 style={{ 
               position: "relative",

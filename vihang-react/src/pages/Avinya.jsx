@@ -103,14 +103,14 @@ export default function Avinya() {
             initial={{ opacity: 0, filter: "blur(20px)", y: 30 }}
             animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
             transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-            style={{ width: "100%", maxWidth: "1200px", margin: "0 auto 1rem auto", position: "relative", display: "flex", justifyContent: "center", alignItems: "center", minHeight: "550px", paddingTop: "6rem" }}
+            style={{ width: "100%", maxWidth: "1200px", margin: "0 auto 1rem auto", position: "relative", display: "flex", justifyContent: "center", alignItems: "center", minHeight: "clamp(250px, 50vw, 550px)", paddingTop: "6rem" }}
           >
             <div style={{ position: "absolute", inset: 0, top: "6rem", display: "flex", justifyContent: "center", gap: "1rem", width: "100%", overflow: "hidden", zIndex: 1 }}>
-              <img src="/idols/alan-turing.jpg" alt="Alan Turing" style={{ width: "18%", height: "400px", objectFit: "cover", filter: "grayscale(100%) contrast(1.2)" }} />
-              <img src="/idols/apj-abdul-kalam.jpg" alt="A.P.J. Abdul Kalam" style={{ width: "18%", height: "400px", objectFit: "cover", filter: "grayscale(100%) contrast(1.2)" }} />
-              <img src="/idols/cv_raman.png" alt="C.V. Raman" style={{ width: "18%", height: "400px", objectFit: "cover", filter: "grayscale(100%) contrast(1.2)" }} />
-              <img src="/idols/srinivasa-ramanujan.jpg" alt="Srinivasa Ramanujan" style={{ width: "18%", height: "400px", objectFit: "cover", filter: "grayscale(100%) contrast(1.2)" }} />
-              <img src="/idols/vijay-bhatkar.jpg" alt="Vijay Bhatkar" style={{ width: "18%", height: "400px", objectFit: "cover", filter: "grayscale(100%) contrast(1.2)" }} />
+              <img src="/idols/alan-turing.jpg" alt="Alan Turing" style={{ width: "18%", height: "clamp(120px, 35vw, 400px)", objectFit: "cover", filter: "grayscale(100%) contrast(1.2)" }} />
+              <img src="/idols/apj-abdul-kalam.jpg" alt="A.P.J. Abdul Kalam" style={{ width: "18%", height: "clamp(120px, 35vw, 400px)", objectFit: "cover", filter: "grayscale(100%) contrast(1.2)" }} />
+              <img src="/idols/cv_raman.png" alt="C.V. Raman" style={{ width: "18%", height: "clamp(120px, 35vw, 400px)", objectFit: "cover", filter: "grayscale(100%) contrast(1.2)" }} />
+              <img src="/idols/srinivasa-ramanujan.jpg" alt="Srinivasa Ramanujan" style={{ width: "18%", height: "clamp(120px, 35vw, 400px)", objectFit: "cover", filter: "grayscale(100%) contrast(1.2)" }} />
+              <img src="/idols/vijay-bhatkar.jpg" alt="Vijay Bhatkar" style={{ width: "18%", height: "clamp(120px, 35vw, 400px)", objectFit: "cover", filter: "grayscale(100%) contrast(1.2)" }} />
             </div>
             <h1 style={{ 
               position: "relative",

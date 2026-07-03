@@ -45,6 +45,19 @@
   overflow: hidden;
 }
 
+.team-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Apply the 70% scale only on desktop screens */
+@media (min-width: 900px) {
+  .team-desktop-scale {
+    zoom: 0.7;
+  }
+}
+
 .team-photo-image-wrapper img {
   width: 100%;
   height: auto;
